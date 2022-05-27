@@ -1,0 +1,147 @@
+.main-footer {
+  background: #f2f8fb;
+  padding: 80px 0;
+}
+
+.footer-left__logo {
+  max-width: 203px;
+  width: 100%;
+  display: block;
+  flex: 1 0 0;
+}
+
+.footer-left__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.footer-left__copy {
+  font-size: 16px;
+  margin-top: 30px;
+  color: #92a6b9;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.footer-center__menu h4 {
+  font-size: 24px;
+  color: var(--gray-color);
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.footer-center__menu ul {
+  display: block;
+}
+
+.footer-center__menu ul li {
+  display: block;
+}
+
+.footer-center__menu ul li a {
+  color: var(--text-black-color);
+  display: inline-block;
+  margin-bottom: 25px;
+  text-decoration: none;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.footer-right__social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.footer-right__social li {
+  display: block;
+  margin: 0 15px 20px 15px;
+}
+
+.footer-right__social li a {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: var(--main-box-shadow);
+  border-radius: 10em;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  transition: var(--transition-defult);
+  text-decoration: none;
+}
+
+.footer-right__social li a .fa {
+  color: var(--accent);
+}
+
+.main-footer__disclaimer {
+  margin-top: 80px;
+  padding-top: 80px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      90deg,
+      rgba(224, 225, 226, 0) 0%,
+      #e0e1e2 29.4%,
+      rgba(224, 225, 226, 0.876953) 68.09%,
+      rgba(224, 225, 226, 0.15625) 99.04%
+    );
+    top: 0;
+    height: 1px;
+    left: 0;
+    right: 0;
+  }
+  p {
+    font-size: 16px;
+    color: var(--text-black-color);
+    margin-bottom: 30px;
+  }
+  .main-footer__disclaimer-gray {
+    margin-bottom: 80px;
+    color: #92a6b9;
+  }
+  @media (max-width: 1023px) {
+    margin-top: 30px;
+    padding-top: 30px;
+    .main-footer__disclaimer-gray {
+      margin-bottom: 30px;
+    }
+  }
+}
+.footer-right__year {
+  font-size: 14px;
+  text-align: right;
+  color: #92a6b9;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mobile-about__img {
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.mobile-about__img img {
+  width: 100%;
+  height: auto;
+}

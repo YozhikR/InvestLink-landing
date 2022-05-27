@@ -1,0 +1,260 @@
+.s-main-soprovozhdenie {
+  padding-top: 110px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 209px;
+    left: 0;
+    right: 0;
+    top: auto;
+    background: #f7f7f7;
+    z-index: -1;
+  }
+  @media (max-width: 1023px) {
+    padding-top: 0;
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.main-soprovozhdenie__title {
+  display: flex;
+  padding-top: 30px;
+  background-color: #fff;
+  h1 {
+    font-family: var(--headlineFont);
+    font-size: 45px;
+    line-height: 100%;
+    text-transform: uppercase;
+    background: linear-gradient(46.31deg, #0c9665 2.41%, #71c550 98.05%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 176px;
+  }
+  &-left {
+    padding-left: 86px;
+    padding-right: 79px;
+    padding-bottom: 109px;
+    width: 50%;
+    background-color: #fff;
+    border-right: 1px solid #e9f2f7;
+  }
+
+  @media (max-width: 1023px) {
+    background-color: transparent;
+    padding-top: 130px;
+    h1 {
+      font-size: 32px;
+      color: #fff;
+      -webkit-text-fill-color: #fff;
+      text-align: center;
+      margin-bottom: 180px;
+    }
+    &-left {
+      background-color: transparent;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 50px;
+      border-right: 0;
+    }
+  }
+  @media (max-width: 578px) {
+    h1 {
+      margin-bottom: 150px;
+    }
+  }
+}
+
+.main-soprovozhdenie__img {
+  height: 209px;
+  width: 100%;
+  left: 50%;
+  position: absolute;
+  img {
+    height: 100%;
+    object-fit: cover;
+    &:last-child {
+      display: none;
+    }
+  }
+  @media (max-width: 1023px) {
+    left: 0;
+    z-index: -1;
+    height: 324px;
+    img {
+      width: 100%;
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
+
+.s-have-broker {
+  background: #f7f7f7;
+  padding: 130px 0;
+  &__items {
+    margin: 80px -20px;
+    display: flex;
+  }
+  &__partner {
+    margin: 0 20px;
+    background: #ffffff;
+    border: 1px solid #bdc8d3;
+    border-radius: 8px;
+    width: 33.3%;
+    padding: 32px 0;
+    text-align: center;
+  }
+  .block-info {
+    p {
+      font-size: 25px;
+    }
+  }
+  @media (max-width: 1023px) {
+    padding: 50px 0 40px;
+    &__items {
+      margin: 50px 0;
+      flex-direction: column;
+    }
+    &__partner {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+  }
+  .block-info {
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+.strategy-banner {
+  position: relative;
+  padding: 105px 0;
+  &::before {
+    content: "";
+    background: #f7f7f7;
+    position: absolute;
+    left: 0;
+    right: 50%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    background: linear-gradient(46.31deg, #0c9665 2.41%, #71c550 98.05%);
+    position: absolute;
+    left: 50%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  &__inside {
+    display: flex;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    width: 50%;
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+  &__right {
+    width: 50%;
+    padding: 0 130px 0 97px;
+    .block-info {
+      p {
+        color: #fff;
+      }
+    }
+  }
+  @media (max-width: 1023px) {
+    padding: 50px 0;
+    &::before {
+      right: 0;
+    }
+    &::after {
+      display: none;
+    }
+    &__inside {
+      flex-direction: column;
+    }
+    &__left {
+      width: 100%;
+      padding-left: 0;
+      h2 {
+        text-transform: inherit;
+        margin-bottom: 30px;
+      }
+    }
+    &__right {
+      width: 100%;
+      padding: 0;
+      .block-info {
+        padding-left: 0;
+        &::before {
+          display: none;
+        }
+        p {
+          font-size: 18px;
+          color: #363f41;
+        }
+      }
+    }
+  }
+}
+
+.soprovozhdenie-graphic {
+  padding: 120px 0;
+  &__inside {
+    display: flex;
+  }
+  &__left {
+    width: 50%;
+    padding: 0 99px 0 75px;
+    display: flex;
+    align-items: center;
+    p {
+      font-size: 25px;
+      color: #363f41;
+    }
+  }
+  &__right {
+    width: 50%;
+  }
+  @media (max-width: 1023px) {
+    padding: 50px 0;
+    &__inside {
+      flex-direction: column;
+    }
+    &__left {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 35px;
+      .block-info {
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+    &__right {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

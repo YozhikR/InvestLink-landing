@@ -1,0 +1,795 @@
+/* USER VARIABLES SECTION */
+:root {
+  --accent: #00c1a2;
+  --text-color: #425466;
+  --text-black-color: #363f41;
+  --regular-text: 16px;
+  --lineheight: 130%;
+  --userfont: "Inter", sans-serif;
+  --headlineFont: "Cera-st", sans-serif;
+  --systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  --main-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.04);
+  --gray-color: #bdc8d3;
+  --transition-defult: 0.2s ease;
+  --btn-hoverColor: #5583ff;
+}
+
+/* BOOTSTRAP SETTINGS SECTION */
+
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 0.625rem;
+}
+
+.row,
+.row > * {
+  --bs-gutter-x: 1.25rem;
+}
+
+/* FONTS LOAD SECTION */
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-Black.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-BlackItalic.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-Bold.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-BoldItalic.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-Medium.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-MediumItalic.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-Regular.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-RegularItalic.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-Light.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-LightItalic.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-Thin.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-ThinItalic.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* GENERAL CSS SETTINGS */
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+  border-color: red;
+}
+
+input:required:valid,
+textarea:required:valid {
+  border-color: green;
+}
+
+body {
+  font-family: var(--userfont);
+  font-size: var(--regular-text);
+  line-height: var(--lineheight);
+  color: var(--text-color);
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden !important;
+}
+._body-lock {
+  overflow-y: hidden;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+section {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--headlineFont);
+    color: var(--text-black-color);
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+}
+
+section h1 {
+  line-height: 100%;
+  text-transform: uppercase;
+  background: linear-gradient(
+    45.31deg,
+    #6d28f5 14.63%,
+    #5d3ceb 20.54%,
+    #2c6cd6 32.74%,
+    #1d95d1 45.68%,
+    #06bca6 74.89%,
+    #00cb8c 85.61%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+section h2 {
+  font-size: 65px;
+  line-height: 90%;
+  @media (max-width: 1023px) {
+    font-size: 36px;
+  }
+}
+
+section h3 {
+  line-height: 110%;
+}
+
+section h4 {
+  font-weight: 400;
+  line-height: 110%;
+}
+
+p {
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+.vert-line::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.0625em;
+  background: linear-gradient(
+    0deg,
+    #e0e1e200,
+    #e0e1e2 29.4%,
+    hsla(210, 3%, 88%, 0.877) 68.09%,
+    hsla(210, 3%, 88%, 0.156) 99.04%
+  );
+  display: block;
+}
+
+.horizon-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.0625em;
+  background: linear-gradient(
+    90deg,
+    #e0e1e200,
+    #e0e1e2 29.4%,
+    hsla(210, 3%, 88%, 0.877) 68.09%,
+    hsla(210, 3%, 88%, 0.156) 99.04%
+  );
+  display: block;
+}
+
+.btn-outline {
+  border-radius: 8px;
+  border: 1px solid #fff;
+  display: block;
+  max-width: 250px;
+  width: 100%;
+  padding: 14.5px 0;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: 0.3s ease-out;
+  &:hover {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+  }
+}
+
+// ------------------------------------------
+
+/* another pages ============================================= */
+/* block-info */
+.block-info {
+  position: relative;
+  padding-left: 29px;
+}
+.block-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background: #7ae24a;
+  border-radius: 5px;
+}
+.block-info p {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  color: #363f41;
+}
+
+/* pre-ipo.html ============================================= */
+
+.s-main-preipo {
+  padding-top: 110px;
+  position: relative;
+}
+.s-main-preipo::before {
+  content: "";
+  position: absolute;
+  height: 209px;
+  left: 0;
+  right: 0;
+  top: auto;
+  background: #f2f8fb;
+  z-index: -1;
+}
+
+.main-preipo__title {
+  display: flex;
+  padding-top: 60px;
+  background-color: #fff;
+}
+
+.main-preipo__title-left {
+  padding-left: 86px;
+  padding-right: 79px;
+  position: relative;
+  width: 50%;
+  background-color: #fff;
+  border-right: 1px solid #e9f2f7;
+}
+.main-preipo__title-right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-left: 122px;
+  padding-bottom: 87px;
+}
+.main-preipo__img {
+  height: 209px;
+  position: absolute;
+  left: 50%;
+}
+.main-preipo__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-preipo__title h1 {
+  font-family: var(--headlineFont);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100%;
+  text-transform: uppercase;
+  background: linear-gradient(
+    45.31deg,
+    #dc32c8 14.63%,
+    #da32c8 14.99%,
+    #a82bd7 26.7%,
+    #8327e2 36.93%,
+    #6c24e9 45.19%,
+    #6423eb 50.42%,
+    #2769f7 72.19%,
+    #0096ff 85.61%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 134px;
+}
+.main-preipo__title-gradient {
+  position: relative;
+  padding-bottom: 73px;
+  padding-top: 84px;
+  margin-top: 97px;
+}
+.main-preipo__title-gradient::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    45.31deg,
+    #dc32c8 14.63%,
+    #da32c8 14.99%,
+    #a82bd7 26.7%,
+    #8327e2 36.93%,
+    #6c24e9 45.19%,
+    #6423eb 50.42%,
+    #2769f7 72.19%,
+    #0096ff 85.61%
+  );
+  left: -86px;
+  top: 0;
+  bottom: 0;
+  right: -81px;
+}
+.main-preipo__title-gradient p {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.main-preipo__title-right .stages__item {
+  margin-bottom: 45px;
+}
+.main-preipo__title-right .stages__item-number {
+  margin-right: 15px;
+}
+.main-preipo__title-right .stages__item-text h3 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+.main-preipo__title-right .stages__item-text p {
+  font-size: 19px;
+}
+
+/* s-what-preipo */
+.s-what-preipo {
+  padding-top: 130px;
+  padding-bottom: 97px;
+  background: #f2f8fb;
+}
+.s-what-preipo h2 {
+  font-family: var(--headlineFont);
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 90%;
+  color: #363f41;
+  margin-bottom: 86px;
+}
+.s-what-preipo .block-info p {
+  font-size: 25px;
+}
+.s-what-preipo__img {
+  margin-top: 86px;
+}
+.s-what-preipo__img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* preipo-banner */
+
+.preipo-banner {
+  background: linear-gradient(
+    45.31deg,
+    #dc32c8 14.63%,
+    #da32c8 14.99%,
+    #a82bd7 26.7%,
+    #8327e2 36.93%,
+    #6c24e9 45.19%,
+    #6423eb 50.42%,
+    #2769f7 72.19%,
+    #0096ff 85.61%
+  );
+  padding: 91px 0 63px;
+}
+.preipo-banner__inside {
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+}
+.preipo-banner__text {
+  margin-right: 60px;
+}
+.preipo-banner__text h3 {
+  font-family: var(--headlineFont);
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 90%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.preipo-banner__text p {
+  font-family: var(--headlineFont);
+  font-weight: 300;
+  font-size: 31px;
+  line-height: 100%;
+  text-align: center;
+  color: #7dbeff;
+  margin-bottom: 0;
+}
+
+/* s-how-work */
+
+.s-how-work {
+  padding-top: 130px;
+}
+.s-how-work h2 {
+  font-family: var(--headlineFont);
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 90%;
+  color: #363f41;
+  margin-bottom: 86px;
+}
+.how-work-stages {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -24px;
+}
+.how-work-stages .stages__item {
+  width: 33.3%;
+  flex-direction: column;
+  position: relative;
+  padding: 0 24px;
+  margin-bottom: 80px;
+}
+.how-work-stages .stages__item .stages__item-number {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.how-work-stages .stages__item::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(
+    0deg,
+    rgba(224, 225, 226, 0) 0%,
+    #e0e1e2 29.4%,
+    rgba(224, 225, 226, 0.876953) 68.09%,
+    rgba(224, 225, 226, 0.15625) 99.04%
+  );
+  width: 1px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* s-benefit preipo-benefit */
+.preipo-benefit {
+  padding-top: 378px;
+  margin-top: 379px;
+  position: relative;
+  background-color: #f2f8fb;
+  background-image: url(../images/licence-gray-bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.preipo-benefit .benefit {
+  padding: 0;
+}
+.preipo-benefit__img {
+  position: absolute;
+  top: -376px;
+}
+
+/*  */
+.preipo-s-invest {
+  background-color: #fff;
+}
+
+/* s-conditions */
+.s-conditions {
+  padding-top: 126px;
+  padding-bottom: 116px;
+  position: relative;
+}
+.s-conditions::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    45.31deg,
+    #dc32c8 14.63%,
+    #da32c8 14.99%,
+    #a82bd7 26.7%,
+    #8327e2 36.93%,
+    #6c24e9 45.19%,
+    #6423eb 50.42%,
+    #2769f7 72.19%,
+    #0096ff 85.61%
+  );
+  left: 0;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.s-conditions::after {
+  content: "";
+  position: absolute;
+  background: #f2f8fb;
+  left: 50%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.main-conditions {
+  display: flex;
+}
+.main-conditions__left {
+  padding-right: 48px;
+  width: 50%;
+}
+.main-conditions__left h2 {
+  font-family: var(--headlineFont);
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 90%;
+  color: #ffffff;
+  margin-bottom: 85px;
+}
+
+.main-conditions__text {
+  margin-bottom: 45px;
+}
+.main-conditions__text:last-child {
+  margin-bottom: 0;
+}
+.main-conditions__text h5 {
+  font-family: var(--headlineFont);
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 100%;
+  color: #7dbeff;
+  margin-bottom: 20px;
+}
+
+.main-conditions__text-info {
+  display: flex;
+}
+.main-conditions__text-info h3 {
+  font-family: var(--headlineFont);
+  font-weight: 400;
+  font-size: 85px;
+  line-height: 90%;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 0;
+  width: 45%;
+}
+.main-conditions__text-info p {
+  font-family: var(--headlineFont);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.main-conditions__text-info h4 {
+  font-family: var(--headlineFont);
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 90%;
+  letter-spacing: -0.02em;
+  color: #363f41;
+}
+
+.main-conditions__right .main-conditions__text-info p {
+  color: #363f41;
+  font-size: 30px;
+}
+
+.main-conditions__right {
+  width: 50%;
+  padding-left: 45px;
+}
+
+/* s-preipo-structure */
+
+.s-preipo-structure {
+  position: relative;
+  margin-bottom: 160px;
+}
+.s-preipo-structure::before {
+  content: "";
+  height: 60px;
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  background-image: url(../images/gradient-line.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.preipo-structure {
+  padding: 130px 0;
+}
+.preipo-structure h2 {
+  font-family: var(--headlineFont);
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 90%;
+  color: #363f41;
+  margin-bottom: 130px;
+}
+.preipo-structure__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 86px;
+}
+
+.preipo-structure__info .block-info {
+  margin-right: 123px;
+}
+.preipo-structure__info .block-info h3 {
+  font-family: var(--headlineFont);
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 90%;
+  color: #363f41;
+  margin-bottom: 35px;
+}
+.preipo-structure__info .block-info p {
+  margin-bottom: 35px;
+}
+.preipo-structure__info .block-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* s-preipo-risks */
+
+.s-preipo-risks {
+  margin-bottom: 130px;
+}
+.s-preipo-risks h2 {
+  font-family: var(--headlineFont);
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 90%;
+  color: #363f41;
+  margin-bottom: 86px;
+}
+.s-preipo-risks p {
+  margin-bottom: 35px;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  color: #425466;
+}
+.s-preipo-risks p:last-child {
+  margin-bottom: 0;
+}
+
+/* particles.js */
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  top: -90px;
+  height: 110%;
+  background: linear-gradient(
+    45.31deg,
+    #6d28f5 14.63%,
+    #5d3ceb 20.54%,
+    #2c6cd6 32.74%,
+    #1d95d1 45.68%,
+    #06bca6 74.89%,
+    #00cb8c 85.61%
+  );
+}
+.particles-container {
+  position: relative;
+}
