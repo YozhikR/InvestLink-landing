@@ -120,17 +120,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	// main-top-line
-	var header = $("#mainTopLine");
-	var scrollChange = 90;
-	$(window).scroll(function() {
-			var scroll = $(window).scrollTop();
+	// var header = $("#mainTopLine");
+	// var scrollChange = 90;
+	// $(window).scroll(function() {
+	// 		var scroll = $(window).scrollTop();
 
-			if (scroll >= scrollChange) {
-					header.removeClass('main-top-line');
-			} else {
-					header.addClass("main-top-line");
-			}
-	});
+	// 		if (scroll >= scrollChange) {
+	// 				header.removeClass('main-top-line');
+	// 		} else {
+	// 				header.addClass("main-top-line");
+	// 		}
+	// });
 
 	particlesJS("particles-js", {
 		"particles": {
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			"line_linked": {
 				"enable": true,
 				"distance": 150,
-				"color": "#ffffff",
+				"color": "#77C850",
 				"opacity": 0.4,
 				"width": 1
 			},

@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     top: auto;
-    background: #f2f8fb;
+    background: #f7f7f7;
     z-index: -1;
   }
   @media (max-width: 1023px) {
@@ -51,7 +51,7 @@
     h1 {
       font-size: 65px;
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-text-fill-color: unset;
       background-clip: text;
       text-fill-color: transparent;
       color: #77c850;
@@ -179,15 +179,7 @@
   padding-bottom: 113px;
   &::before {
     content: "";
-    background: linear-gradient(
-      45.31deg,
-      #6d28f5 14.63%,
-      #5d3ceb 20.54%,
-      #2c6cd6 32.74%,
-      #1d95d1 45.68%,
-      #06bca6 74.89%,
-      #00cb8c 85.61%
-    );
+    background: #63be37;
     position: absolute;
     left: 0;
     right: 50%;
@@ -197,7 +189,7 @@
   }
   &::after {
     content: "";
-    background: #f2f8fb;
+    background: #f7f7f7;
     position: absolute;
     right: 0;
     left: 50%;
@@ -449,7 +441,7 @@
   position: relative;
   &::before {
     content: "";
-    background: #f2f8fb;
+    background: #f7f7f7;
     position: absolute;
     left: 0;
     right: 50%;
@@ -459,15 +451,7 @@
   }
   &::after {
     content: "";
-    background: linear-gradient(
-      45.31deg,
-      #6d28f5 14.63%,
-      #5d3ceb 20.54%,
-      #2c6cd6 32.74%,
-      #1d95d1 45.68%,
-      #06bca6 74.89%,
-      #00cb8c 85.61%
-    );
+    background: #63be37;
     position: absolute;
     right: 0;
     left: 50%;
@@ -512,7 +496,7 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 130%;
-        color: #05e8a1;
+        color: #eef3f5;
         display: block;
         margin-top: 20px;
         text-decoration: none;
