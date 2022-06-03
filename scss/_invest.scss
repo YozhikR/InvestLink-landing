@@ -10,7 +10,7 @@
     left: 0;
     right: 0;
     top: auto;
-    background: #f7f7f7;
+    background: var(--bg-color);
     z-index: -1;
   }
   @media (max-width: 1023px) {
@@ -89,7 +89,7 @@
 
 /* s-invest-stages */
 .s-invest-stages {
-  background-color: #f7f7f7;
+  background-color: var(--bg-color);
   padding-top: 138px;
   padding-bottom: 38px;
   background-image: url(../images/licence-gray-bg.png);
@@ -142,14 +142,14 @@
     h3 {
       font-family: var(--headlineFont);
       font-weight: 400;
-      font-size: 45px;
+      font-size: 40px;
       line-height: 90%;
       color: #363f41;
       margin-bottom: 35px;
     }
     p {
       font-weight: 400;
-      font-size: 21px;
+      font-size: 19px;
       line-height: 130%;
       letter-spacing: -0.01em;
       color: #425466;
@@ -220,9 +220,8 @@
         margin-right: 24px;
       }
       h3 {
-        font-family: var(--headlineFont);
         font-weight: 400;
-        font-size: 45px;
+        font-size: 40px;
         line-height: 90%;
         color: #363f41;
       }
@@ -231,7 +230,7 @@
       width: 50%;
       p {
         font-weight: 400;
-        font-size: 21px;
+        font-size: 19px;
         line-height: 130%;
         letter-spacing: -0.01em;
         color: #425466;

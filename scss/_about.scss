@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     top: auto;
-    background: #f7f7f7;
+    background: var(--bg-color);
     z-index: -1;
   }
   @media (max-width: 1023px) {
@@ -57,12 +57,16 @@
       color: #77c850;
       height: 209px;
       margin-bottom: 221px;
+      font-weight: 300;
+      span {
+        font-weight: 300;
+      }
     }
     &-text {
       h2 {
         font-family: var(--headlineFont);
         font-weight: 400;
-        font-size: 65px;
+        font-size: 55px;
         line-height: 90%;
         margin-bottom: 46px;
         color: #363f41;
@@ -80,7 +84,7 @@
         h3 {
           font-family: var(--headlineFont);
           font-weight: 400;
-          font-size: 50px;
+          font-size: 40px;
           line-height: 90%;
           letter-spacing: -0.02em;
           color: #363f41;
@@ -179,7 +183,7 @@
   padding-bottom: 113px;
   &::before {
     content: "";
-    background: #63be37;
+    background: var(--seccent);
     position: absolute;
     left: 0;
     right: 50%;
@@ -189,7 +193,7 @@
   }
   &::after {
     content: "";
-    background: #f7f7f7;
+    background: var(--bg-color);
     position: absolute;
     right: 0;
     left: 50%;
@@ -204,10 +208,7 @@
     width: 50%;
     padding-right: 122px;
     h2 {
-      font-family: var(--headlineFont);
-      font-weight: 400;
-      font-size: 65px;
-      line-height: 90%;
+      font-size: 55px;
       color: #ffffff;
       margin-bottom: 60px;
     }
@@ -222,10 +223,7 @@
     width: 50%;
     padding-left: 101px;
     h2 {
-      font-family: var(--headlineFont);
-      font-weight: 400;
-      font-size: 65px;
-      line-height: 90%;
+      font-size: 55px;
       color: #363f41;
       margin-bottom: 60px;
     }
@@ -263,15 +261,7 @@
         top: 0;
         bottom: 0;
         z-index: -1;
-        background: linear-gradient(
-          45.31deg,
-          #6d28f5 14.63%,
-          #5d3ceb 20.54%,
-          #2c6cd6 32.74%,
-          #1d95d1 45.68%,
-          #06bca6 74.89%,
-          #00cb8c 85.61%
-        );
+        background: var(--seccent);
       }
       h2 {
         font-size: 36px;
@@ -295,7 +285,7 @@
         top: 0;
         bottom: 0;
         z-index: -1;
-        background: #f2f8fb;
+        background: var(--bg-color);
       }
       h2 {
         font-size: 36px;
@@ -441,7 +431,7 @@
   position: relative;
   &::before {
     content: "";
-    background: #f7f7f7;
+    background: var(--bg-color);
     position: absolute;
     left: 0;
     right: 50%;
@@ -483,7 +473,7 @@
     padding-top: 68px;
     .block-info {
       &::before {
-        background: #77c850;
+        background: var(--green-light);
       }
       p {
         font-weight: 400;
@@ -548,15 +538,7 @@
         top: 0;
         bottom: 0;
         z-index: -1;
-        background: linear-gradient(
-          45.31deg,
-          #6d28f5 14.63%,
-          #5d3ceb 20.54%,
-          #2c6cd6 32.74%,
-          #1d95d1 45.68%,
-          #06bca6 74.89%,
-          #00cb8c 85.61%
-        );
+        background: var(--seccent);
       }
       .block-info {
         a {

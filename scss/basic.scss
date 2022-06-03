@@ -1,6 +1,8 @@
 /* USER VARIABLES SECTION */
 :root {
   --accent: #77c850;
+  --seccent: #63be37;
+  --green-light: #7ae24a;
   --text-color: #425466;
   --text-black-color: #363f41;
   --regular-text: 16px;
@@ -10,8 +12,9 @@
   --systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   --main-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.04);
   --gray-color: #bdc8d3;
+  --bg-color: #f7f7f7;
   --transition-defult: 0.2s ease;
-  --btn-hoverColor: #5583ff;
+  --btn-hoverColor: #7ae24a;
 }
 
 /* BOOTSTRAP SETTINGS SECTION */
@@ -143,6 +146,12 @@ textarea:required:valid {
   border-color: green;
 }
 
+html {
+  @media (max-width: 1023px) {
+    overflow-x: hidden !important;
+  }
+}
+
 body {
   font-family: var(--userfont);
   font-size: var(--regular-text);
@@ -204,7 +213,7 @@ section h1 {
 }
 
 section h2 {
-  font-size: 65px;
+  font-size: 55px;
   line-height: 90%;
   @media (max-width: 1023px) {
     font-size: 36px;
@@ -278,8 +287,8 @@ p {
   margin-top: 20px;
   transition: 0.3s ease-out;
   &:hover {
-    color: var(--text-color);
-    border: 1px solid var(--text-color);
+    color: #fff;
+    border: 1px solid var(--green-light);
   }
   @media (max-width: 1023px) {
     max-width: 100%;
@@ -301,7 +310,7 @@ p {
   bottom: 0;
   left: 0;
   width: 5px;
-  background: #7ae24a;
+  background: var(--accent);
   border-radius: 5px;
 }
 .block-info p {
