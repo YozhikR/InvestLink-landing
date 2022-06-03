@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 				data.forEach(item => {
 					let template = `
-				 	<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+					<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
 						<a href="https://dm.investlink.io/cabinet/invest-idea/${item.id}" class="preipo-item">
 							<div class="preipo-item__img">
 								<img src="${backendAPI}/${item.idea_info.poster_image_url}" alt="${item.idea_info.title}">
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						</div>
 					</a>
 				</div>
-				 `
+					`
 
 					preIpoEl.insertAdjacentHTML('afterbegin', template)
 
