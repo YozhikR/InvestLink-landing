@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			let fbResponse = await axios.get(`${backendAPI}/preipo/`)
 			if (fbResponse.data) {
 
-				let data = fbResponse.data
+				let data = fbResponse.data.filter((item) => item.idea_info.current_status.code === 1);
+
 
 				data.forEach(item => {
 					let template = `
@@ -25,48 +26,20 @@ document.addEventListener('DOMContentLoaded', function () {
 						<div class="preipo-item__inset">
 							<h4 class="preipo-item__title">${item.idea_info.title}</h4>
 							<p class="preipo-item__description">${item.idea_info.short_description}</p>
-							<ul class="preipo-item__tag">
-								<li class="tag tag-blue">Финтех</li>
-								<li class="tag tag-grey">Бизнес процессы</li>
-							</ul>
 						</div>
 					</a>
 				</div>
 				 `
-
 					preIpoEl.insertAdjacentHTML('afterbegin', template)
-
-
-
 				})
 
-				let template = `
-				 	<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-						<div class="preipo-item">
-							<div class="preipo-item__img">
-								<img src="images/preipo/1.jpg" alt="Outreach">
-							</div>
-						<div class="preipo-item__icon">
-							<img src="images/preipo-icon/1.svg" alt="Outreach">
-						</div>
-						<div class="preipo-item__inset">
-							<h4 class="preipo-item__title">${fbResponse[0].data.title}</h4>
-							<p class="preipo-item__description">Intercom - разработчик платформы для общения с клиентами. </p>
-							<ul class="preipo-item__tag">
-								<li class="tag tag-blue">Финтех</li>
-								<li class="tag tag-grey">Бизнес процессы</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				 `
 			}
 		} catch (e) {
 			console.log(e)
 		}
 	}
 
-	getPreIpoData().then()
+	getPreIpoData()
 
 
 	$('.mobile-about__img').slick({
@@ -102,35 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		$(this).parents(".faq-wrapper").find(".faq-description").not(this).slideUp().prev().removeClass("active");
 		$(this).next().not(":visible").slideDown().prev().addClass("active");
 	});
-
-	function animateValue(id, start, end, duration) {
-		if (start === end) return;
-		var range = end - start;
-		var current = start;
-		var increment = end > start ? 1 : -1;
-		var stepTime = Math.abs(Math.floor(duration / range));
-		var obj = document.getElementById(id);
-		var timer = setInterval(function () {
-			current += increment;
-			obj.innerHTML = current;
-			if (current == end) {
-				clearInterval(timer);
-			}
-		}, stepTime);
-	}
-
-	// main-top-line
-	// var header = $("#mainTopLine");
-	// var scrollChange = 90;
-	// $(window).scroll(function() {
-	// 		var scroll = $(window).scrollTop();
-
-	// 		if (scroll >= scrollChange) {
-	// 				header.removeClass('main-top-line');
-	// 		} else {
-	// 				header.addClass("main-top-line");
-	// 		}
-	// });
 
 	particlesJS("particles-js", {
 		"particles": {
@@ -242,10 +186,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 		"retina_detect": true
 	});
-	
-	
+
+
 	/* ---- stats.js config ---- */
-	
+
 	var count_particles, stats, update;
 	stats = new Stats;
 	stats.setMode(0);
@@ -254,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	stats.domElement.style.top = '0px';
 	document.body.appendChild(stats.domElement);
 	count_particles = document.querySelector('.js-count-particles');
-	update = function() {
+	update = function () {
 		stats.begin();
 		stats.end();
 		if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
