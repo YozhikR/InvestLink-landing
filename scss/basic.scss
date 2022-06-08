@@ -295,6 +295,19 @@ p {
   }
 }
 
+.wavy-line {
+  img {
+    width: 100%;
+  }
+  @media (max-width: 1023px) {
+    img {
+      width: 200%;
+      left: -45%;
+      position: relative;
+    }
+  }
+}
+
 // ------------------------------------------
 
 /* another pages ============================================= */
