@@ -575,21 +575,24 @@ canvas {
 }
 
 .preipo-item {
-  height: 450px;
-  background-color: #fff;
   margin-bottom: 20px;
-  text-decoration: none;
-  color: #425466;
+  display: block;
   position: relative;
-  overflow: hidden;
-  display: flex;
-  padding-bottom: 20px;
-  box-shadow: var(--main-box-shadow);
-  flex-direction: column;
   border-radius: 15px;
-  &:hover {
-    text-decoration: none;
-    color: inherit;
+  overflow: hidden;
+  text-decoration: none;
+  &-wrapper {
+    height: 450px;
+    background-color: #fff;
+    color: #425466;
+    display: flex;
+    padding-bottom: 20px;
+    box-shadow: var(--main-box-shadow);
+    flex-direction: column;
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
   }
   &__img {
     max-width: 100%;
@@ -664,6 +667,37 @@ canvas {
     }
   }
 
+  //hover
+  &__hover {
+    position: absolute;
+    padding: 20px 20px 30px;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-out;
+    &-head {
+      display: flex;
+      padding-bottom: 20px;
+    }
+    &-img {
+      width: 55px;
+      height: 55px;
+      margin-right: 16px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &:hover {
+    .preipo-item__hover {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
   @media (max-width: 1023px) {
     height: 375px;
   }
