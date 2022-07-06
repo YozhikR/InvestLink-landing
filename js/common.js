@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	//Query
 	const preIpoEl = document.getElementById('preipo')
 
-	const backendAPI = 'https://pp.investlink.io'
+	const backendAPI = 'https://prod1.investlink.io'
 
 	async function getPreIpoData() {
 		try {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				data.forEach(item => {
 					let template = `
 				 	<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-						<a href="https://dm.investlink.io/cabinet/invest-idea/${item.id}" class="preipo-item">
+						<a href="https://app.investlink.io/cabinet/ideas/pre-ipo/${item.id}" class="preipo-item card">
 							<div class="preipo-item__img">
 								<img src="${backendAPI}/${item.idea_info.poster_image_url}" alt="${item.idea_info.title}">
 							</div>
@@ -187,25 +187,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		"retina_detect": true
 	});
 
-
-	/* ---- stats.js config ---- */
-
-	var count_particles, stats, update;
-	stats = new Stats;
-	stats.setMode(0);
-	stats.domElement.style.position = 'absolute';
-	stats.domElement.style.left = '0px';
-	stats.domElement.style.top = '0px';
-	document.body.appendChild(stats.domElement);
-	count_particles = document.querySelector('.js-count-particles');
-	update = function () {
-		stats.begin();
-		stats.end();
-		if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-			count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-		}
-		requestAnimationFrame(update);
-	};
-	requestAnimationFrame(update);
-
+	AOS.init();
+	
 })

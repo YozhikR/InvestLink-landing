@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <!--	 <base href="/">-->
 
-    <title>InvestLink - Сопровождение</title>
+    <title>InvestLink - Инвестиционный консалтинг</title>
     <meta name="description" content="InvestLink - Инвестиционный консалтинг" />
 
     <meta
@@ -31,9 +31,9 @@
     <link rel="stylesheet" href="libs/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" href="libs/slick-carousel/slick/slick-theme.css" />
 
-    <link rel="stylesheet" href="css/main.css?5v" />
-    <link rel="stylesheet" href="css/about.css?4v" />
-    <link rel="stylesheet" href="css/media.css?4v" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media.css" />
   </head>
 
   <body>
@@ -41,11 +41,11 @@
       <div class="mobile-container">
         <nav class="mobile-menu__link">
           <a href="/">Главная</a>
-          <a href="/about.html" class="nav-link">О нас</a>
-			  <a href="/invest-consulting.html" class="nav-link">Консалтинг</a>
-			  <a href="/soprovozhdenie.html" class="nav-link">Сопровождение</a>
-			  <a href="/funds.html" class="nav-link">Хедж-фонды</a>
-			  <a href="/pre-ipo.html" class="nav-link">Pre-IPO</a>
+          <a href="about.html">О нас</a>
+          <a href="invest-consulting.html" class="active">Консалтинг</a>
+          <a href="soprovozhdenie.html">Сопровождение</a>
+          <a href="funds.html">Хедж-фонды</a>
+          <a href="pre-ipo.html">Pre-IPO</a>
         </nav>
         <div class="mobile-menu__bottom horizon-line">
           <a href="https://app.investlink.io/auth/sign-up" class="btn btn-outline"
@@ -82,11 +82,11 @@
           <!-- /.col-lg-3 -->
           <div class="col-lg-8 d-lg-block d-none">
             <nav class="top-line__nav">
-              <a href="/about.html" class="nav-link">О нас</a>
-			  <a href="/invest-consulting.html" class="nav-link">Консалтинг</a>
-			  <a href="/soprovozhdenie.html" class="nav-link">Сопровождение</a>
-			  <a href="/funds.html" class="nav-link">Хедж-фонды</a>
-			  <a href="/pre-ipo.html" class="nav-link">Pre-IPO</a>
+              <a href="about.html" class="nav-link">О нас</a>
+              <a href="invest-consulting.html" class="nav-link">Консалтинг</a>
+              <a href="soprovozhdenie.html" class="nav-link">Сопровождение</a>
+              <a href="funds.html" class="nav-link">Хедж-фонды</a>
+              <a href="pre-ipo.html" class="nav-link">Pre-IPO</a>
             </nav>
           </div>
           <!-- /.col-lg-6 -->
@@ -117,84 +117,142 @@
     </div>
     <!-- /.top-line -->
 
-    <section class="s-main-soprovozhdenie">
-      <div class="main-soprovozhdenie__img">
-        <img src="images/main-soprovozhdenie/soprovozhdenie-bg.png" alt="soprovozhdenie" />
-        <img src="images/main-soprovozhdenie/soprovozhdenie-bg-mobile.png" alt="soprovozhdenie" />
+    <section class="s-main-invest">
+      <div class="main-invest__img">
+        <img src="images/main-invest/main-invest-bg.png" alt="invest" />
+        <img src="images/main-invest/main-invest-bg-mobile.png" alt="invest" />
       </div>
       <div class="container">
-        <div class="main-soprovozhdenie">
-          <div class="main-soprovozhdenie__title">
-            <div class="main-soprovozhdenie__title-left">
-              <h1>Индивидуальное сопровождение счетов</h1>
+        <div class="main-invest">
+          <div class="main-invest__title">
+            <div class="main-invest__title-left">
+              <h1 data-aos="fade-up" data-aos-duration="1500" data-aos-delay="250" data-aos-duration="1500">Инвестиционный консалтинг</h1>
               <div class="block-info">
-                <p>
-                  Исполнение торговой инвестиционной стратегии на персональных брокерских счетах клиентов.
+                <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500" data-aos-duration="1500">
+                  Оказание консультационных услуг и полное профессиональное
+                  сопровождение инвестиционного портфеля.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <!-- /.main-soprovozhdenie -->
+        <!-- /.main-invest -->
       </div>
       <!-- /.container -->
     </section>
-    <!-- /.s-soprovozhdenie -->
+    <!-- /.s-invest -->
 
-		<section class="s-have-broker">
-			<div class="container">
-				<h2>Есть брокерский счёт?</h2>
-				<div class="s-have-broker__items">
-					<div class="s-have-broker__partner">
-						<img src="images/partners/partner-1.png" alt="Partner">
-					</div>
-					<div class="s-have-broker__partner">
-						<img src="images/partners/partner-2.png" alt="Partner">
-					</div>
-					<div class="s-have-broker__partner">
-						<img src="images/partners/partner-3.png" alt="Partner">
-					</div>
-				</div>
-				<div class="block-info">
-					<p><div>Подключайтесь к готовым инвестиционным стратегиям, чтобы получать стабильную долгосрочную прибыль с учётом Вашего аппетита к риску.</div></p>
-				</div>
-			</div>
-			<!-- /.container -->
-		</section>
-		<!-- /.s-have-broker -->
+    <section class="s-invest-stages">
+      <div class="container">
+        <div class="invest-stages">
+          <div class="stages__item">
+            <h4 data-aos="fade-up" data-aos-duration="1500" class="stages__item-number">01</h4>
+            <div class="stages__item-text">
+              <h3 data-aos="fade-up" data-aos-duration="1500">Анализ</h3>
+              <p data-aos="fade-up" data-aos-duration="1500">
+                Выявляем Ваши долгосрочные финансовые цели и находим для Вас
+                оптимальные пути для их достижения.
+              </p>
+            </div>
+          </div>
+          <div class="stages__item">
+            <h4 data-aos="fade-up" data-aos-duration="1500" class="stages__item-number">02</h4>
+            <div class="stages__item-text">
+              <h3 data-aos="fade-up" data-aos-duration="1500">Стратегия</h3>
+              <p data-aos="fade-up" data-aos-duration="1500">
+                Исходя из индивидуальных потребностей каждого клиента, мы
+                составляем инвестиционную стратегию.
+              </p>
+            </div>
+          </div>
+          <div class="stages__item">
+            <h4 data-aos="fade-up" data-aos-duration="1500" class="stages__item-number">03</h4>
+            <div class="stages__item-text">
+              <h3 data-aos="fade-up" data-aos-duration="1500">Портфель</h3>
+              <p data-aos="fade-up" data-aos-duration="1500">
+                В соответствии с персональным риск-профилем, мы подбираем
+                подходящие инструменты и формируем инвестиционный портфель.
+              </p>
+            </div>
+          </div>
+          <div class="stages__item">
+            <h4 data-aos="fade-up" data-aos-duration="1500" class="stages__item-number">04</h4>
+            <div class="stages__item-text">
+              <h3 data-aos="fade-up" data-aos-duration="1500">Сопровождение</h3>
+              <p data-aos="fade-up" data-aos-duration="1500">
+                Профессиональная команда полностью сопровождает портфель
+                инвестора на всех этапах и контролирует риски.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /.invest-stages -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.s-invest-stages -->
 
-    <section class="s-benefit soprovozhdenie-benefit">
+    <section class="s-benefit invest-benefit-2">
+			<div class="invest-benefit-el-before"></div>
       <div class="container">
         <div class="benefit">
+          <h2 data-aos="fade-up" data-aos-duration="1500">Выгода и преимущества</h2>
           <div class="benefit__list">
             <div class="benefit__item">
               <div class="benefit__item-title">
                 <img src="images/benefit/shield-tick.svg" alt="benefit" />
-                <h3>Безопасность</h3>
-              </div>
-              <div class="benefit__item-text">
-                <p>Все сделки исполняются на персональных счетах клиентов. Клиент вправе выбрать брокера-партнера. У управляющих есть право исключительно на покупку-продажу ценных бумаг.&nbsp;</p>
-              </div>
-            </div>
-            <div class="benefit__item">
-              <div class="benefit__item-title">
-                <img src="images/benefit/show.svg" alt="benefit" />
-                <h3>Надежность</h3>
+                <h3>НАДЕЖНОСТЬ</h3>
               </div>
               <div class="benefit__item-text">
                 <p>
-                  Работаем исключительно с регулируемыми участниками финансового рынка.
+                  Активы клиентов хранятся на сегрегированных счетах в
+                  регулируемых финансовых институтах Европы и США.
                 </p>
               </div>
             </div>
             <div class="benefit__item">
               <div class="benefit__item-title">
-                <img src="images/benefit/like-benefit.svg" alt="benefit" />
-                <h3>Доступный вход</h3>
+                <img src="images/benefit/time-circle.svg" alt="benefit" />
+                <h3>ВРЕМЯ</h3>
               </div>
               <div class="benefit__item-text">
                 <p>
-                  Минимальная сумма инвестиций от 20.000$
+                  Нет необходимости следить за рынком, самостоятельно проводить
+                  анализ и изучение отдельных индустрий, секторов и компаний.
+                </p>
+              </div>
+            </div>
+            <div class="benefit__item">
+              <div class="benefit__item-title">
+                <img src="images/benefit/group-benefit.svg" alt="benefit" />
+                <h3>КОМАНДА</h3>
+              </div>
+              <div class="benefit__item-text">
+                <p>
+                  Профессиональное сопровождение. Вашим портфелем управляет
+                  профессиональная команда, а не один консультант.
+                </p>
+              </div>
+            </div>
+            <div class="benefit__item">
+              <div class="benefit__item-title">
+                <img src="images/benefit/swap.svg" alt="benefit" />
+                <h3>КОНФЛИКТ ИНТЕРЕСОВ</h3>
+              </div>
+              <div class="benefit__item-text">
+                <p>
+                  Отсутствие конфликта интересов. Мы не являемся брокерами. Прибыль компании генерируется за счёт прироста инвестиционного портфеля, а не за счет комиссий со сделок.
+                </p>
+              </div>
+            </div>
+            <div class="benefit__item">
+              <div class="benefit__item-title">
+                <img src="images/benefit/award.svg" alt="benefit" />
+                <h3>РЕГУЛИРОВАНИЕ</h3>
+              </div>
+              <div class="benefit__item-text">
+                <p>
+                  Лицензия Advising on Investments позволяет предоставлять консультационные услуги на территории РК по международным стандартам.
                 </p>
               </div>
             </div>
@@ -202,43 +260,9 @@
         </div>
       </div>
       <!-- /.container -->
+			<div class="invest-benefit-el-after"></div>
     </section>
     <!-- /.s-benefit -->
-
-		<section class="strategy-banner">
-      <div class="container">
-        <div class="strategy-banner__inside">
-          <div class="strategy-banner__left">
-            <h2>Стратегия</h2>
-          </div>
-          <div class="strategy-banner__right">
-            <div class="block-info">
-              <p>Предусматривает активную торговлю ценными бумагами, что позволяет извлекать прибыль независимо от рыночных колебаний.&nbsp;</p>
-            </div>
-          </div>
-        </div>
-        <!-- /.strategy-banner__inside -->
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.strategy-banner -->
-
-		<div class="soprovozhdenie-graphic">
-			<div class="container">
-				<div class="soprovozhdenie-graphic__inside">
-					<div class="soprovozhdenie-graphic__left">
-						<div class="block-info">
-							<p>Коэффициент показателя risk/reward позволяет демонстрировать высокий результат доходности при ограниченном риске.</p>
-						</div>
-					</div>
-					<div class="soprovozhdenie-graphic__right">
-						<img src="images/main-soprovozhdenie/soprovozhdenie-graphic.png" alt="Graphic">
-					</div>
-				</div>
-			</div>
-			<!-- /.container -->
-		</div>
-		<!-- /.soprovozhdenie-graphic -->
 
     <footer class="main-footer">
       <div class="container">
@@ -250,7 +274,7 @@
           </div>
           <!-- /.col-md-3 -->
 
-          <div class="col-sm-9">
+          <!-- <div class="col-sm-9"> -->
             <ul class="footer-right__social">
               <li>
                 <a href="#"><i class="fa fa-facebook"></i></a>
@@ -268,15 +292,8 @@
                 <a href="#"><i class="fa fa-telegram"></i></a>
               </li>
             </ul>
-          </div>
+          <!-- </div> -->
           <!-- /.col-md-9 -->
-
-          <div class="col-md-3">
-            <div class="footer-left__copy">
-              <p></p>
-            </div>
-          </div>
-          <!-- /.col-md-3 -->
 
           <div class="col-md-9">
             <div class="footer-right__year">
@@ -311,10 +328,13 @@
       gtag("config", "G-0CD6YKYDRL");
     </script>
 
+		
+
     <script src="libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="libs/gsap/dist/gsap.min.js"></script>
     <script src="libs/gsap/dist/DrawSVGPlugin.min.js"></script>
     <script src="libs/gsap/dist/CSSRulePlugin.min.js"></script>
+    <script src="libs/aos/aos.js"></script>
     <script src="libs/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script src="libs/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <script src="libs/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>

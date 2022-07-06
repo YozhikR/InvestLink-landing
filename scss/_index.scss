@@ -341,10 +341,18 @@ canvas {
 
 .about-img {
   max-width: 100%;
+  margin: 0 auto;
   width: 100%;
   position: sticky;
   top: 190px;
-  z-index: 3;
+  left: 0;
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 120px;
+    left: 0;
+  }
   @media (max-width: 1023px) {
     position: static;
   }
@@ -457,6 +465,15 @@ canvas {
       }
     }
   }
+}
+
+.why-headline {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  position: sticky;
+  top: 240px;
+  left: 0;
 }
 
 /* s-about */
