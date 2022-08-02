@@ -42,6 +42,54 @@ document.addEventListener('DOMContentLoaded', function () {
 	getPreIpoData()
 
 
+	// Start.
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	let animationScroll = gsap.timeline({
+		defaults: {
+			duration: 4
+		}
+	})
+		.from('#cons', {
+			opacity: 1
+		})
+		// .to('#cons', {
+		// 	opacity: 0
+		// })
+		.from('#support', {
+			opacity: 0
+		})
+		.to('#support', {
+			opacity: 1
+		})
+		.from('#funds', {
+			opacity: 0
+		})
+		.to('#funds', {
+			opacity: 1
+		})
+		.from('#preipo-img', {
+			opacity: 0
+		})
+		.to('#preipo-img', {
+			opacity: 1
+		})
+
+	ScrollTrigger.create({
+		animation: animationScroll,
+		trigger: '#animationAbout',
+		start: "top",
+		endTrigger: "#animationAbout",
+		end: "+=1750",
+		scrub: true,
+		pin: ".about-img",
+		// markers: true
+	})
+
+	// End.
+
+
 	$('.mobile-about__img').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,

@@ -1,0 +1,340 @@
+/* USER VARIABLES SECTION */
+:root {
+  --accent: #77c850;
+  --seccent: #63be37;
+  --green-light: #7ae24a;
+  --text-color: #425466;
+  --text-black-color: #363f41;
+  --regular-text: 16px;
+  --lineheight: 130%;
+  --userfont: "Inter", sans-serif;
+  --headlineFont: "Cera-st", sans-serif;
+  --systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  --main-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.04);
+  --gray-color: #bdc8d3;
+  --bg-color: #f7f7f7;
+  --transition-defult: 0.2s ease;
+  --btn-hoverColor: #7ae24a;
+}
+
+/* BOOTSTRAP SETTINGS SECTION */
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 0.625rem;
+}
+
+.row,
+.row > * {
+  --bs-gutter-x: 1.25rem;
+}
+
+/* FONTS LOAD SECTION */
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-Black.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-BlackItalic.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-Bold.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-BoldItalic.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-Medium.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-MediumItalic.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-Regular.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-RegularItalic.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-Light.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-LightItalic.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-Thin.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  src: url("../fonts/CeraPro/CeraPro-ThinItalic.woff2") format("woff2");
+  font-family: "Cera-st";
+  font-weight: 100;
+  font-style: italic;
+}
+/* GENERAL CSS SETTINGS */
+::-webkit-input-placeholder {
+  color: #666;
+}
+::-moz-placeholder {
+  color: #666;
+}
+:-ms-input-placeholder {
+  color: #666;
+}
+::-ms-input-placeholder {
+  color: #666;
+}
+::placeholder {
+  color: #666;
+}
+
+::-moz-selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+  border-color: red;
+}
+
+input:required:valid,
+textarea:required:valid {
+  border-color: green;
+}
+
+@media (max-width: 1023px) {
+  html {
+    overflow-x: hidden !important;
+  }
+}
+
+body {
+  font-family: var(--userfont);
+  font-size: var(--regular-text);
+  line-height: var(--lineheight);
+  color: var(--text-color);
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden !important;
+}
+
+._body-lock {
+  overflow-y: hidden;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+  font-family: var(--headlineFont);
+  color: var(--text-black-color);
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+section h1 {
+  line-height: 100%;
+  text-transform: uppercase;
+  background: linear-gradient(46.31deg, #0c9665 2.41%, #71c550 98.05%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+section h2 {
+  font-size: 55px;
+  line-height: 90%;
+}
+@media (max-width: 1023px) {
+  section h2 {
+    font-size: 36px;
+  }
+}
+
+section h3 {
+  line-height: 110%;
+}
+
+section h4 {
+  font-weight: 400;
+  line-height: 110%;
+}
+
+p {
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+.vert-line {
+  position: relative;
+}
+
+.vert-line::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.0625em;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(224, 225, 226, 0)), color-stop(29.4%, #e0e1e2), color-stop(68.09%, hsla(210deg, 3%, 88%, 0.877)), color-stop(99.04%, hsla(210deg, 3%, 88%, 0.156)));
+  background: linear-gradient(0deg, rgba(224, 225, 226, 0), #e0e1e2 29.4%, hsla(210deg, 3%, 88%, 0.877) 68.09%, hsla(210deg, 3%, 88%, 0.156) 99.04%);
+  display: block;
+}
+
+.horizon-line {
+  position: relative;
+}
+
+.horizon-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.0625em;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(224, 225, 226, 0)), color-stop(29.4%, #e0e1e2), color-stop(68.09%, hsla(210deg, 3%, 88%, 0.877)), color-stop(99.04%, hsla(210deg, 3%, 88%, 0.156)));
+  background: linear-gradient(90deg, rgba(224, 225, 226, 0), #e0e1e2 29.4%, hsla(210deg, 3%, 88%, 0.877) 68.09%, hsla(210deg, 3%, 88%, 0.156) 99.04%);
+  display: block;
+}
+
+.btn-outline {
+  border-radius: 8px;
+  border: 1px solid #fff;
+  display: block;
+  max-width: 250px;
+  width: 100%;
+  padding: 14.5px 0;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  background-color: #fff;
+}
+.btn-outline:hover {
+  color: #fff;
+  border: 1px solid var(--green-light);
+}
+@media (max-width: 1023px) {
+  .btn-outline {
+    max-width: 100%;
+  }
+}
+
+.wavy-line img {
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  .wavy-line img {
+    width: 200%;
+    left: -45%;
+    position: relative;
+  }
+}
+
+/* another pages ============================================= */
+/* block-info */
+.block-info {
+  position: relative;
+  padding-left: 29px;
+}
+
+.block-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+.block-info p {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  color: #363f41;
+}

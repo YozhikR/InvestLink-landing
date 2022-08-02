@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--	 <base href="/">-->
+
+    <title>InvestLink - Pinemelon</title>
+    <meta name="description" content="InvestLink - Инвестиционный консалтинг" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="icon" href="images/favicon.ico" />
+    <meta property="og:image" content="images/preview.jpg" />
+
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css" />
+
+    <!-- Fonts	 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="libs/fontawesome/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="libs/css-hamburgers/dist/hamburgers.min.css" />
+    <link rel="stylesheet" href="libs/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="libs/slick-carousel/slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="css/main.css?5v" />
+    <link rel="stylesheet" href="css/about.css?4v" />
+    <link rel="stylesheet" href="css/media.css?4v" />
+  </head>
+
+  <body style="background: #F7F7F7;">
+    <div class="mobile-menu">
+      <div class="mobile-container">
+        <nav class="mobile-menu__link">
+          <a href="/">Главная</a>
+          <a href="/about.html" class="nav-link">О нас</a>
+			  <a href="/invest-consulting.html" class="nav-link">Консалтинг</a>
+			  <a href="/soprovozhdenie.html" class="nav-link">Сопровождение</a>
+			  <a href="/funds.html" class="nav-link">Хедж-фонды</a>
+			  <a href="/pre-ipo.html" class="nav-link">Pre-IPO</a>
+        </nav>
+        <div class="mobile-menu__bottom horizon-line">
+          <a href="https://app.investlink.io/auth/sign-up" class="btn btn-outline"
+            >Регистрация</a
+          >
+          <a href="https://app.investlink.io/auth/sign-in" class="btn btn-accent"
+            >Войти</a
+          >
+        </div>
+        <!-- /.mobile-menu__bottom -->
+      </div>
+      <!-- /.mobile-container -->
+    </div>
+    <!-- /.mobile-menu -->
+
+    <div class="top-line">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-2 col-6">
+            <a href="/" class="top-line__brand">
+							<img
+                class="brand"
+                src="images/brand.svg"
+                alt="InvestLink - Logo"
+              />
+              <img
+                class="brand-white"
+                src="images/brand-white.svg"
+                alt="InvestLink - Logo"
+              />
+						</a>
+            </a>
+          </div>
+          <!-- /.col-lg-3 -->
+          <div class="col-lg-8 d-lg-block d-none">
+            <nav class="top-line__nav">
+              <a href="/about.html" class="nav-link">О нас</a>
+			  <a href="/invest-consulting.html" class="nav-link">Консалтинг</a>
+			  <a href="/soprovozhdenie.html" class="nav-link">Сопровождение</a>
+			  <a href="/funds.html" class="nav-link">Хедж-фонды</a>
+			  <a href="/pre-ipo.html" class="nav-link">Pre-IPO</a>
+            </nav>
+          </div>
+          <!-- /.col-lg-6 -->
+          <div class="col-lg-2 col-6">
+            <div class="top-line__account d-lg-block d-md-none d-none">
+              <ul class="account-link">
+                <li><a href="https://app.investlink.io/auth/sign-in">Войти</a></li>
+                <li>
+                  <a href="https://app.investlink.io/auth/sign-up">Регистрация</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="hamburger-wrapper d-lg-none d-md-block">
+              <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+            <!-- /.hamburger-wrapper -->
+          </div>
+          <!-- /.col-lg-3 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.top-line -->
+
+		<section class="preipo-idea__wrapper">
+			<div class="container">
+				<div class="preipo-idea">
+					<div class="preipo-idea__main">
+
+						<div class="preipo-header">
+							<div class="preipo-header__top">
+								<div class="preipo-header__logo vert-line">
+									<div class="preipo-logo">
+										<img src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/pinemelon/Icon_PineMelon.png" alt="Icon_PineMelon">
+									</div>
+									<div class="preipo-title">PINEMELON</div>
+								</div>
+								<div class="preipo-header__slogan">
+									Онлайн-супермаркет
+								</div>
+							</div>
+							<div class="preipo-header__bottom">
+								<div class="preipo-tag">
+									<span class="tag">E-commerce</span>
+								</div>
+								<div class="preipo-link">
+									<a target="_blank" href="https://pinemelon.com/"><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M8.33301 11.3335C8.69088 11.8119 9.14747 12.2078 9.6718 12.4943C10.1961 12.7807 10.7759 12.9511 11.3719 12.9937C11.9678 13.0364 12.566 12.9504 13.1258 12.7416C13.6856 12.5328 14.1939 12.206 14.6163 11.7835L17.1163 9.28347C17.8753 8.49763 18.2953 7.44512 18.2858 6.35263C18.2763 5.26014 17.8381 4.21509 17.0656 3.44256C16.2931 2.67002 15.248 2.23182 14.1555 2.22233C13.063 2.21283 12.0105 2.63281 11.2247 3.3918L9.79134 4.8168" stroke="#5C6E8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M11.6668 9.66653C11.309 9.18809 10.8524 8.79221 10.328 8.50575C9.80371 8.21928 9.22391 8.04893 8.62796 8.00625C8.03201 7.96357 7.43384 8.04956 6.87405 8.25838C6.31425 8.4672 5.80591 8.79397 5.3835 9.21653L2.8835 11.7165C2.12451 12.5024 1.70453 13.5549 1.71402 14.6474C1.72352 15.7399 2.16172 16.7849 2.93426 17.5574C3.70679 18.33 4.75184 18.7682 5.84433 18.7777C6.93682 18.7872 7.98932 18.3672 8.77517 17.6082L10.2002 16.1832" stroke="#5C6E8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>https://pinemelon.com/</a>
+								</div>
+							</div>
+						</div>
+						<!-- /.preipo-header -->
+
+						<div class="preipo-card__image-block card">
+							<iframe style="border-radius: 8px;" width="100%" height="410px" src="https://www.youtube.com/embed/TDWA8u4qNwk" title="PINEMELON – Late Seed Round" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+
+						<div class="preipo-card__pdf card">
+							<div class="preipo-card__pdf-img">
+								<img src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/union.svg" alt="Union">
+							</div>
+							<div class="preipo-card__pdf-text">
+								<h6>Презнтация инвестиционной идеи PINEMELON
+									</h6>
+									<span>PDF, 10.7 MB</span>
+							</div>
+							<div class="preipo-card__pdf-btn">
+								<a target="_blank" href="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/pinemelon/PineMelon_Idea.pdf">Скачать</a>
+							</div>
+						</div>
+						<!-- /.preipo-card__pdf -->
+						
+						<div class="preipo-card-about card">
+							<h4 class="preipo-card__headline">О компании</h4>
+							<h5 class="preipo-card__quote">
+								PINEMELON — это онлайн-супермаркет нового поколения, который был
+								запущен командой Arbuz.kz в США.
+							</h5>
+							<p>
+								Стартап PINEMELON – это проверенная на Казахстанском рынке
+								финансовая модель, в качестве одного из крупнейших
+								онлайн-супермаркетов Arbuz.kz, который занимает лидирующие позиции в
+								городах Алматы и Нур-Султан. Точкой отправления новой e-commerce
+								площадки является город Денвер, штат Колорадо.
+							</p>
+							<p>Arbuz.kz в Казахстане – это:</p>
+							<ul class="preipo-card__list" style="margin-bottom: 20px">
+								<li>10 млрд тг run-rate оборот</li>
+								<li>+465% в среднем – рост компании из года в год</li>
+								<li>2.000 заказов в день</li>
+								<li>500+ сотрудников</li>
+								<li>
+									Собственная IT-инфраструктура и автоматизация бизнес процессов
+								</li>
+								<li>2 склада (3.000 кв. м) в Алматы и Нур-Султане</li>
+								<li>Более 20.000 SKU товаров</li>
+								<li>Аудитория: Средний и средний плюс класс</li>
+							</ul>
+							<!-- /.preipo-card__list -->
+							<p>
+								Pinemelon.com олицетворяет собой четвертую эволюционную ступень
+								развития онлайн-супермаркетов в США, которая имеет все шансы стать
+								лидером рынка, за счет правильной стратегии развития, четкого
+								позиционирования, углубленного понимания рынка и целевой аудитории,
+								опытной команды, сильного состава инвестров и эдвайзеров. Ну и
+								конечно же, нельзя забывать про основу e-commerce бизнеса – IT
+								инфраструктуру, которую уже создала и продолжает усовершенствование
+								команда разработки Arbuz.kz, за годы работы на рынке Казахстана.
+							</p>
+							<h5 class="preipo-card__quote" style="margin-bottom: 0">
+								Стартап был запущен в Денвере (штат Колорадо) – 12 апреля 2022 г.
+							</h5>
+						</div>
+						<!-- /.preipo-card-about -->
+						<div class="preipo-card-ceo card">
+							<h4 class="preipo-card__headline">CEO компании</h4>
+							<div class="preipo-card-ceo__inside-wrapper">
+								<div class="preipo-card-ceo__img">
+									<img
+										src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/pinemelon/lee.png"
+										alt="Lee"
+									/>
+								</div>
+								<div class="preipo-card-ceo__text">
+									<h5 class="preipo-card__quote">
+										Алексей Ли
+										<span>CEO, PINEMELON</span>
+									</h5>
+									<p style="margin-bottom: 20px">
+										Основатель и CEO Pinemelon.com. Запустил 3 лидера рынка
+										e-commerce в Казахстане.
+									</p>
+									<p style="margin-bottom: 20px">
+										Arbuz.kz – крупнейший онлайн-супермаркет в Алматы и Нур-Султане:
+										10 млрд тг run-rate оборот, 465% рост из года в год, 2.000
+										заказов в день.
+									</p>
+									<p style="margin-bottom: 20px">
+										Aviata.kz – крупнейшее онлайн-тревел агентство: 30% доля рынка в
+										авиабилетах и 20% доля рынка ЖД билетов в Казахстане.
+									</p>
+									<p style="margin-bottom: 20px">
+										ТИКЕТОН – крупнейший билетный сервис для мероприятий (кино,
+										концерты, театры, спорт.события), продающий более 300,000
+										билетов в месяц.
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- /.preipo-card-ceo -->
+						<div class="preipo-card-main-investors card">
+							<h4 class="preipo-card__headline">Основные инвесторы</h4>
+							<h5 class="preipo-card__quote">
+								Сильный состав инвесторов, которые готовы соинвестировать на
+								следующих раундах.
+							</h5>
+							<div class="preipo-card__person-wrapper">
+								<div class="preipo-card__person">
+									<div class="preipo-card__person-img">
+										<img
+											src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/pinemelon/timur.png"
+											alt="Timur"
+										/>
+									</div>
+									<div class="preipo-card__person-text">
+										<h5>Тимур Турлов</h5>
+										<p>
+											Основной акционер и CEO во Freedom Finance Corp., публично
+											торгуемой компании на NASDAQ.
+										</p>
+										<p>
+											Активный бизнес-ангел в секторе электронной коммерции и
+											финтеха.
+										</p>
+									</div>
+								</div>
+								<div class="preipo-card__person">
+									<div class="preipo-card__person-img">
+										<img
+											src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/pinemelon/serik.png"
+											alt="Serik"
+										/>
+									</div>
+									<div class="preipo-card__person-text">
+										<h5>Серик Толукпаев</h5>
+										<p>
+											Основатель и акционер группы Айтас — крупнейшего производителя
+											куриного мяса в Казахстане. Холдинг состоит из 11 вертикально
+											интегрированных компаний enterprises (от растениеводства до
+											дистрибуции). Ранее запускал одну из известных сетей
+											супермаркетов.
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- /.preipo-card__person -->
+						</div>
+						<!-- /.preipo-card-main-investors -->
+						<div class="preipo-card-prospects card">
+							<h4 class="preipo-card__headline">Ключевые тезисы (Highlights)</h4>
+							<ul class="preipo-card__list">
+								<li>
+									Проверенная бизнес модель – Крупнейший онлайн-супермаркет
+									Arbuz.kz.
+								</li>
+								<li>
+									Основатель: Алексей Ли, запустил 3 лидера рынка онлайн коммерции в
+									Казахстане (Arbuz.kz, Aviata.kz, Тикетон).
+								</li>
+								<li>
+									Опытная команда ТОП-менеджеров, сборная лидеров электронной
+									коммерции в Казахстане.
+								</li>
+								<li>
+									Сильный состав инвесторов и эдвайзеров: Тимур Турлов (Freedom
+									Finance), Cерик Толукпаев (Айтас Групп), Серик Калдыкулов (Elefund
+									Ventures).
+								</li>
+								<li>
+									General Manager в США: Крис Франклин (15 лет в сети супермаркетов
+									Trader Joe’s).
+								</li>
+								<li>
+									Коммерческий директор: Джон Генгель (7 лет руководил сетью Whole
+									Foods Market.
+								</li>
+								<li>
+									$1 триллион – рынок супермаркетов США, а рынок
+									онлайн-супермаркетов – $250 млрд к 2025 году.
+								</li>
+								<li>
+									Быстро масштабируемая стратегия развития в США: 1 город > 30+
+									городов до 2025 года.
+								</li>
+								<li>
+									Стартап запущен 12 апреля 2022 г (50+ заказов в день, средний чек
+									$58 у новых и $75+ у повторных клиентов).
+								</li>
+								<li>
+									Уникальная стратегия ценообразования, высоко конкурентные цены на
+									якорные продукты и уникальные торговые предложения, за счет тесной
+									работы с локальными производителями и фермерами.
+								</li>
+								<li>Развитие фулфилмента для фермеров.</li>
+								<li>
+									Большой потенциал для проведения новых раундов, за счет наличия
+									всех звеньев капитала до IPO.
+								</li>
+							</ul>
+							<!-- /.preipo-card__list -->
+						</div>
+						<div class="preipo-card-prospects card">
+							<h4 class="preipo-card__headline">Бизнес модель</h4>
+							<ul class="preipo-card__list">
+								<li>
+									Большие (3 тыс. кв.м.) склады с 30% площади под охлаждаемые /
+									морозильные камеры – чтобы быть лучшим во фреше – самой сложной
+									части для онлайн-супермаркетов.
+								</li>
+								<li>
+									Сейчас склад расположен близко к 2 магистралям. 1 фулфилмент-центр
+									может обслуживать целиком город среднего размера, и замещает
+									необходимость ставить физические магазины в популярных местах.
+								</li>
+								<li>
+									Флот брендированных машин с охлаждением (собственные и в аренде)
+									позволяет доставлять фреш, а также быть “биллбордами на колёсах”.
+								</li>
+								<li>Количество SKU: сейчас 6,000. Цель: 16,000</li>
+								<li>
+									Доставка: экспресс за 1 час, Доставка день в день с 2-часовыми
+									окнами.
+								</li>
+								<li>Стоимость доставки: Бесплатная доставка от 30 долларов</li>
+								<li>Таргет валовой маржи: 28%</li>
+								<li>Условия отсрочки: +15 день</li>
+								<li>
+									Local-first: до 20% ассортимента – это локальные производители и
+									фермеры
+								</li>
+							</ul>
+							<!-- /.preipo-card__list -->
+						</div>
+						<!-- /.business-model -->
+						<div class="preipo-card-master-plan card">
+							<h4 class="preipo-card__headline">Мастер-план</h4>
+							<h5 class="preipo-card__quote">
+								Мастер-план развития состоит из двух фаз:
+							</h5>
+							<ul class="preipo-card__points">
+								<li>
+									<span>1.</span>
+									<p>
+										<strong>Фаза I:</strong> Зайти на 1 средний город, обкатать
+										бизнес-модель и инструменты маркетинга и чёткого
+										позиционирования
+									</p>
+								</li>
+								<li>
+									<span>2.</span>
+									<p>Масштабироваться в 30 городах “под радаром”</p>
+								</li>
+								<li>
+									<span>3.</span>
+									<p>
+										<strong>Фаза II:</strong> Начать менять индустрию – через
+										создания маркетплейса прямого взаимодействия с фермерами
+									</p>
+								</li>
+								<li>
+									<span>4.</span>
+									<p>Войти в большие мегаполисы - NY, LA, и др.</p>
+								</li>
+								<li>
+									<span>5.</span>
+									<p>
+										Начать продавать другие категории – аптека, косметика, игрушки,
+										посуда и пр.
+									</p>
+								</li>
+							</ul>
+							<!-- /.preipo-card__points -->
+						</div>
+						<!-- /.preipo-card-master-plan -->
+						<div
+							class="preipo-card-growth-strategy preipo-card-growth-strategy-1 card"
+						>
+							<h4 class="preipo-card__headline">Стратегия развития / Фаза I</h4>
+							<h5 class="preipo-card__quote">
+								Низковисящие фрукты в средних городах
+							</h5>
+							<div class="preipo-card-growth-strategy__img">
+								<img
+									src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/pinemelon/pinemelon-strategy-1.png"
+									alt="Strategy"
+								/>
+							</div>
+							<ul class="preipo-card__list" style="margin: 35px 0">
+								<li>
+									Быстрое масштабирование в 30+ средних городах США (1-3 млн
+									человек) с моделью, заточенной под такие города – 1 большой склад,
+									возможность доставлять большой ассортимент за 1 час.
+								</li>
+								<li>
+									Срывать только “низковисящие фрукты” в каждом городе, 3% рынка –
+									молодые образованные семьи с маленькими детьми – у них большое
+									потребление, необходимость питаться правильно, и далее они будут
+									расти в средний+ класс.
+								</li>
+								<li>
+									Не конкурировать на федеральном уровне, быть очень активными в
+									маркетинге в конкретных городах – что более эффективно для
+									капитала. Эти города в отличие от мегаполисов (Лос-Анжелес,
+									Нью-Йорк и пр) зачастую имеют меньше конкуренции и аллоцированных
+									бюджетов больших игроков.
+								</li>
+							</ul>
+							<p>
+								Текущий город – Денвер, Колорадо. Размер рынка в Денвере: $1
+								триллион / 332 млн населения США * 3 млн в Денвере = $9 млрд
+							</p>
+							<h5 class="preipo-card__quote" style="margin: 35px 0">
+								<strong>Цель:</strong><br />
+								9,000 заказов в день × $100 × 365 = $328,500,000<br />
+								30 городов – бизнес на $10 млрд
+							</h5>
+							<strong style="display: block; font-weight: 600; margin-bottom: 35px"
+								>Следущие города с 1 млн населением:</strong
+							>
+							<div class="preipo-card__list-wrapper">
+								<ul class="preipo-card__list">
+									<li>Charlotte, NC</li>
+									<li>Raleigh, NC</li>
+									<li>Nashville, TN</li>
+									<li>Portland, OR</li>
+									<li>Austin, TX</li>
+								</ul>
+								<ul class="preipo-card__list">
+									<li>Cincinnati, OH</li>
+									<li>Minneapolis-St. Paul, MN</li>
+									<li>Bridgeport, CT</li>
+									<li>Omaha, NE</li>
+								</ul>
+							</div>
+							<h5 class="preipo-card__quote" style="margin: 35px 0">
+								Поддержка локальных сообществ — ключ к росту.
+							</h5>
+							<p>
+								Если в некоторых штатах лидирующая сеть монолитна – во Флориде
+								Publix, в Техасе H.E.B., а в Калифорнии нишевые игроки типа Trader
+								Joe’s сильны, многие локации не имеют явного лидера. Отсутствие
+								лояльности к бренду даёт на многих рынках уникальную возможность.
+							</p>
+						</div>
+						<!-- /.preipo-card-growth-strategy-1 -->
+						<div
+							class="preipo-card-growth-strategy preipo-card-growth-strategy-2 card"
+						>
+							<h4 class="preipo-card__headline">Стратегия развития / Фаза II</h4>
+							<h5 class="preipo-card__quote">
+								Маркетплейс взаимодействия с фермерами
+							</h5>
+							<div class="preipo-card-growth-strategy__img">
+								<img
+									src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/pinemelon/pinemelon-strategy-2.png"
+									alt="Strategy"
+								/>
+							</div>
+							<ul class="preipo-card__list">
+								<li>
+									Платформа прямого взаимодействия с фермерами типа Airbnb. Для
+									бесшевных покупок (D2C продаж) фермерских товаров напрямую от
+									поставщиков, без посредников.
+								</li>
+								<li>
+									Инструменты для геймификации и взаимодействия – подписки,
+									уведомления, чарты, бейджики, распродажи фермеров и пр.
+								</li>
+								<li>
+									Готовое решение для фермеров: фулфилмент, кабинет фермера,
+									доставка
+								</li>
+							</ul>
+							<p style="margin-bottom: 30px; margin-top: 30px">
+								Что хорошо получилось у AirBNB? Они раскрыли новую нишу рынка –
+								владельцев недвижимости, которые стали создавать необычные дома – и
+								тем самым стали менять ландшафт скучной “индустрии гостеприимства” с
+								типовыми отелями.
+							</p>
+							<p style="margin-bottom: 30px">
+								Платформа – децентрализация, перебалансировка сил. Можно ли сделать
+								то же самое для современных фермеров?
+							</p>
+							<p style="margin-bottom: 30px">
+								Многие из них – это люди с достатком, в прошлом профессионалы из
+								других индустрий, которые осознанно занимаются фермерством в зрелом
+								возрасте. Их знают и уважают локальные сообщества.
+							</p>
+							<p>
+								Если совместить онлайн-супермаркет с еженедельным закупом плюс
+								фермерские продукты, это будет создавать привычку.
+							</p>
+						</div>
+						<!-- /.preipo-card-growth-strategy-2 -->
+						<div class="preipo-card-block card">
+							<h4 class="preipo-card__headline">
+								История финансирования и дальнейшие шаги
+							</h4>
+							<h5 class="preipo-card__quote">
+								Pre-Seed: $7,000,000 (convertible)<br />
+								<strong style="font-weight: 600">Seed (сейчас):</strong> $6,000,000
+								(convertible)
+							</h5>
+							<ul class="preipo-card__list">
+								<li>
+									Средства будут использованы на маркетинг в размере около $2.8 млн.
+									Остальное — операционные расходы во время роста компании.
+								</li>
+								<li>Series A раунд ожидается в течение 12 месяцев.</li>
+								<li>
+									Burn Rate сейчас около $300 тыс/в месяц, при агрессивном росте
+									будет увеличен до $500 тыс.
+								</li>
+							</ul>
+							<h6
+								style="
+									margin: 35px 0 15px;
+									color: #363f41;
+									font-weight: 400;
+									font-size: 20px;
+									line-height: 130%;
+								"
+							>
+								Майлстоуны:
+							</h6>
+							<ul class="preipo-card__list">
+								<li>Декабрь 2022: 250 заказов в день, $7.2 млн run rate</li>
+								<li>Август 2023: 600 заказов в день, $20 млн run rate</li>
+							</ul>
+						</div>
+						<div class="preipo-card-block card">
+							<h4 class="preipo-card__headline">Структура сделки</h4>
+							<ul class="preipo-card__list">
+								<li>
+									Investlink Holdings LLC инициирует создание на инвесторов общего
+									специального юридического лица (LLC) в безналоговом штате Делавэр,
+									США - SPV (Special Purpose Vehicle).
+								</li>
+								<li>
+									Инвесторы владеют долей от имущества в этой компании, что
+									прописывается в уставе.
+								</li>
+								<li>
+									От этой структуры производится Convertible займ для компании
+									Pinemelon.com, Inc (5915 Broadway, 80216, Denver, CO, USA)
+								</li>
+								<li>
+									После проведения Pinemelon.com, Inc – Round A (ориентир 2023 г.),
+									выпущенные акции, будут записаны на созданную в рамках сделки SPV,
+									в объеме суммы Covertible займа + 20% (сумма дисконта).
+								</li>
+								<li>
+									Таким образом, инвесторы становятся владельцами акций в
+									Pinemelon.com, через владение доли в SPV.
+								</li>
+							</ul>
+						</div>
+						<!-- /.preipo-card-block -->
+						<div class="preipo-card-risks card">
+							<h4 class="preipo-card__headline">Риски</h4>
+							<p>
+								Все материалы, опубликованные от имени компании, и содержащиеся в
+								них сведения, носят исключительно информационный характер и не могут
+								рассматриваться ни как приглашение или побуждение сделать оферту, ни
+								как просьба купить или продать ценные бумаги/другие финансовые
+								инструменты или осуществлять какую-либо иную инвестиционную
+								деятельность. Представленная информация подготовлена на основе
+								источников, которые, по мнению авторов, являются надёжными, но при
+								этом отражает исключительно мнение авторов относительно
+								анализируемых объектов. Несмотря на то, что материал был подготовлен
+								с максимально возможной тщательностью, ни его авторы, ни компания не
+								заявляют ни прямо, ни косвенно об его точности и полноте и не
+								гарантируют их. Любая информация и любые суждения, приведённые в
+								данном материале, являются суждениями, актуальными на момент
+								публикации настоящего материала, и могут быть изменены без
+								предупреждения. Ни компания, ни ее сотрудники не несут
+								ответственности за какие- либо потери, возникшие в результате
+								использования настоящего материала и в любой другой связи с ним.
+							</p>
+						</div>
+						<!-- /.preipo-card-risks -->
+
+					</div>
+					<div class="preipo-idea__aside">
+						<div class="preipo-status card"><div class="status status-green"><span>Активная сделка</span> <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_5487_51520)">
+							<path d="M8.62664 12.1968C9.09899 11.2694 9.80143 10.2425 10.5909 9.27739C8.55226 9.1108 5.57113 8.84809 4.31848 10.7697C3.00275 12.7881 2.83401 13.0466 2.83401 13.0466C1.77534 14.6525 3.3703 16.3501 6.37883 16.8194L7.00037 16.9164C7.39313 16.9777 7.78197 16.9942 8.16124 16.9716C7.52492 16.0065 7.68324 14.0483 8.62664 12.1968Z" stroke="#4EEF71" stroke-width="1.5" stroke-linecap="round"/>
+							<path d="M12.6492 21.2139C12.6336 21.2087 12.6179 21.2034 12.6018 21.1978M19.905 18.5737C18.9229 19.381 17.873 20.0943 16.9274 20.5623C15.3698 21.3335 13.744 21.5562 12.7006 21.2304C13.7557 21.5497 15.4207 21.2965 17.0239 20.4832C19.2648 19.3462 22.0963 16.8688 23.3155 14.9789C24.5351 13.0886 25.5976 9.69299 25.6777 7.433C25.7573 5.17344 23.9731 3.38929 21.7135 3.46888C19.454 3.54848 16.0858 4.60888 14.229 5.82543C12.3722 7.04198 9.89515 9.87305 8.72471 12.1169C7.55383 14.3613 7.49641 16.7387 8.59683 17.4007C9.69725 18.0627 11.1269 19.4924 11.7741 20.578C11.8785 20.7528 12.0286 20.8985 12.2147 21.0151C12.1912 21.397 12.2078 21.7884 12.2695 22.1842L12.3665 22.8058C12.8358 25.8143 14.5334 27.4093 16.1393 26.3506C16.1393 26.3506 16.1393 26.3506 18.4162 24.8661C20.3422 23.6091 20.0716 20.6123 19.905 18.5737Z" stroke="#4EEF71" stroke-width="1.5" stroke-linecap="round"/>
+							<path d="M16.8295 12.3563C17.8384 13.3652 19.4741 13.3652 20.483 12.3563C21.4919 11.3474 21.4919 9.71166 20.483 8.70276C19.4741 7.69385 17.8384 7.69385 16.8295 8.70276C15.8206 9.71166 15.8206 11.3474 16.8295 12.3563Z" stroke="#4EEF71" stroke-width="1.5" stroke-linecap="round"/>
+							<path d="M1.58627 22.2257L3.37695 20.4351" stroke="#4EEF71" stroke-width="1.5" stroke-linecap="round"/>
+							<path d="M6.03593 23.1286L7.82617 21.3384" stroke="#4EEF71" stroke-width="1.5" stroke-linecap="round"/>
+							<path d="M6.94999 27.6086L8.74023 25.8184" stroke="#4EEF71" stroke-width="1.5" stroke-linecap="round"/>
+							</g>
+							<defs>
+							<clipPath id="clip0_5487_51520">
+							<rect width="30" height="30" fill="white"/>
+							</clipPath>
+							</defs>
+							</svg></div></div>
+
+						<div class="card-info card ng-star-inserted"><div class="card-info-inset d-flex"><div class="preipo-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20.7507 13.3335C20.7507 12.9193 20.4149 12.5835 20.0007 12.5835C19.5864 12.5835 19.2507 12.9193 19.2507 13.3335L20.7507 13.3335ZM23.9559 24.8164C24.3146 25.0235 24.7733 24.9005 24.9804 24.5418C25.1875 24.1831 25.0646 23.7244 24.7059 23.5173L23.9559 24.8164ZM4.53213 4.83118C4.20868 5.08994 4.15624 5.5619 4.415 5.88535C4.67376 6.2088 5.14573 6.26124 5.46917 6.00248L4.53213 4.83118ZM9.63584 2.66915C9.95929 2.41039 10.0117 1.93842 9.75297 1.61497C9.49421 1.29153 9.02224 1.23909 8.6988 1.49784L9.63584 2.66915ZM34.5321 6.00248C34.8556 6.26124 35.3275 6.2088 35.5863 5.88535C35.8451 5.5619 35.7926 5.08994 35.4692 4.83118L34.5321 6.00248ZM31.3025 1.49784C30.9791 1.23909 30.5071 1.29153 30.2483 1.61497C29.9896 1.93842 30.042 2.41039 30.3655 2.66915L31.3025 1.49784ZM22.0007 22.8215L22.3757 22.172L22.0007 22.8215ZM20.2686 21.5121L20.9181 21.1371L20.2686 21.5121ZM19.2507 13.3335L19.2507 19.3574H20.7507V13.3335L19.2507 13.3335ZM24.7059 23.5173L22.3757 22.172L21.6257 23.471L23.9559 24.8164L24.7059 23.5173ZM35.9173 20.0002C35.9173 28.7907 28.7912 35.9168 20.0007 35.9168V37.4168C29.6196 37.4168 37.4173 29.6191 37.4173 20.0002H35.9173ZM20.0007 35.9168C11.2101 35.9168 4.08398 28.7907 4.08398 20.0002H2.58398C2.58398 29.6191 10.3817 37.4168 20.0007 37.4168V35.9168ZM4.08398 20.0002C4.08398 11.2096 11.2101 4.0835 20.0007 4.0835V2.5835C10.3817 2.5835 2.58398 10.3812 2.58398 20.0002H4.08398ZM20.0007 4.0835C28.7912 4.0835 35.9173 11.2096 35.9173 20.0002H37.4173C37.4173 10.3812 29.6196 2.5835 20.0007 2.5835V4.0835ZM5.46917 6.00248L9.63584 2.66915L8.6988 1.49784L4.53213 4.83118L5.46917 6.00248ZM35.4692 4.83118L31.3025 1.49784L30.3655 2.66915L34.5321 6.00248L35.4692 4.83118ZM19.2507 19.3574C19.2507 19.9064 19.2498 20.372 19.2878 20.757C19.3273 21.1584 19.4131 21.5304 19.6191 21.8871L20.9181 21.1371C20.8561 21.0297 20.8079 20.888 20.7805 20.6098C20.7515 20.3152 20.7507 19.9355 20.7507 19.3574H19.2507ZM22.3757 22.172C21.875 21.8829 21.5466 21.6924 21.306 21.5199C21.0788 21.3571 20.9801 21.2445 20.9181 21.1371L19.6191 21.8871C19.825 22.2438 20.1043 22.5042 20.4322 22.7391C20.7466 22.9645 21.1503 23.1966 21.6257 23.471L22.3757 22.172Z" fill="#92A6B9"/>
+							</svg></div><div class="preipo-info"><span class="slogan">Идея актуальна</span><strong class="value">до 30 июля 2022</strong></div></div></div>
+
+						<div class="card-info card ng-star-inserted"><div class="preipo-action text-center mt-3"><a target="_blank" href="https://app.investlink.io/cabinet/ideas/pre-ipo/14" class="btn btn-color w-100">Инвестировать</a><p>$5 000 минимальная сумма инвестиций</p></div></div>
+
+						<div class="company-profile-section card"><h4 class="preipo-card__headline">Профиль компании</h4><ul class="horizon-line"><li class="horizon-line ng-star-inserted d-none"><span>Капитализация</span><span>$7 млрд</span></li><!----><li class="horizon-line ng-star-inserted"><span>Суммарный объем инвестиций</span><span>$7 млн</span></li><!----><!----><!----><li class="horizon-line ng-star-inserted"><span>Последний раунд инвестиций</span><span>Pre Seed</span></li><!----><li class="horizon-line ng-star-inserted"><span>Дата последнего раунда</span><span>Ноябрь 2021</span></li><!----><li class="horizon-line ng-star-inserted"><span>Объем инвестиций на последнем раунде</span><span>$7 млн</span></li><!----><li class="horizon-line ng-star-inserted"><span>Год основания компании</span><span>2018</span></li><!----><li class="ng-star-inserted"><span>Кол-во сотрудников</span><span>500+</span></li><!----></ul></div>
+
+						<div class="dealings-section card"><h4 class="preipo-card__headline">Условия сделки</h4><ul class="horizon-line"><li class="horizon-line ng-star-inserted"><span>минимальная сумма инвестиций</span><span>$20 000</span><a href="#" class="dealings-section-info d-none"><svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 11V17M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#92A6B9" stroke-width="1.5" stroke-linecap="round"></path><path d="M13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8Z" fill="#92A6B9"></path></svg></a></li><!----><li class="horizon-line d-none"><span>объем сделки</span><span>150&nbsp;000$</span><div class="d-none"><p>AI-платформа по обнаружению цифрового мошенничества в онлайн-режиме.</p><p> Модели машинного обучения Sift в реальном времени оценивают каждое действие потенциального злоумышленника. </p><a href="#" class="to-learn-more">Узнать больше</a></div><a href="#" class="dealings-section-info d-none"><svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 11V17M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#92A6B9" stroke-width="1.5" stroke-linecap="round"></path><path d="M13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8Z" fill="#92A6B9"></path></svg></a></li><!----><li class="horizon-line ng-star-inserted"><span>Срок подачи заявок</span><span>до 30.07.2022</span><a href="#" class="dealings-section-info d-none"><svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 11V17M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#92A6B9" stroke-width="1.5" stroke-linecap="round"></path><path d="M13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8Z" fill="#92A6B9"></path></svg></a></li><!----><li class="horizon-line d-none"><span>тип сделки</span><span>SPV</span><a href="#" class="to-learn-more">Узнать больше</a></li><li><span>Комиссии</span><span>6% / 20%</span><a href="#" class="dealings-section-info d-none"><svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 11V17M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#92A6B9" stroke-width="1.5" stroke-linecap="round"></path><path d="M13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8Z" fill="#92A6B9"></path></svg></a></li></ul><a href="#" class="btn btn-outline d-none">Об условиях подробней</a></div>
+
+					</div>
+				</div>
+			</div>
+			<!-- /.container -->
+		</section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="main-footer__inside">
+          <div class="footer-left">
+            <a href="/" class="footer-left__logo">
+              <img src="images/brand.svg" alt="InvestLink" />
+            </a>
+            <div class="footer-right__year">
+              © 2022 INVESTLINK. Все права зарегистрированы.
+            </div>
+          </div>
+          <div class="footer-center">
+            <nav class="footer-center__menu">
+              <h4>Решения</h4>
+              <a href="invest-consulting.html">Консалтинг</a>
+              <a href="soprovozhdenie.html">Сопровождение</a>
+              <a href="pre-ipo.html">Pre-IPO</a>
+              <a href="funds.html">Фонды</a>
+            </nav>
+            <nav class="footer-center__menu">
+              <h4>О нас</h4>
+              <a href="about.html">О компании</a>
+              <a href="contacts.html">Контакты</a>
+            </nav>
+          </div>
+          <div class="footer-right">
+            <ul class="footer-right__social">
+              <li>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-telegram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /.main-footer__inside -->
+				<div class="main-footer__disclaimer">
+					<p>Инвестиции в финансовые инструменты на рынке ценных бумаг сопряжены с рисками. К таким рискам относятся получение прибыли, отличающейся от ожидаемой, получение убытков или потеря капитала частично или целиком. Так же, как и менеджмент публичных компаний, менеджмент INVESTLINK не несет личной ответственности перед акционерами и инвесторами.</p>
+					<p>Хедж-фонды и PRE-IPO являются инструментами с повышенным риск-профилем и нацелены на получение сверх-рыночной доходности. Прежде чем инвестировать в любые финансовые инструменты, убедитесь в том, что вы полностью понимаете и принимаете риски, связанные с инвестицией.</p>
+					<p>В презентации используется информация об исторической доходности. Историческая доходность используется только как ориентир для будущих доходов. Историческая доходность не является гарантией будущего дохода. В презентации используются заявления о прогнозируемой доходности в будущем. Такие заявления используются как примеры, и не должны расцениваться как инвестиционные рекомендации.</p>
+				</div>
+      </div>
+      <!--	container	-->
+    </footer>
+    <!--footer	-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0CD6YKYDRL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-0CD6YKYDRL");
+    </script>
+
+    <script src="libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="libs/gsap/dist/gsap.min.js"></script>
+    <script src="libs/gsap/dist/DrawSVGPlugin.min.js"></script>
+    <script src="libs/gsap/dist/CSSRulePlugin.min.js"></script>
+    <script src="libs/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="libs/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script src="libs/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script src="libs/slick-carousel/slick/slick.min.js"></script>
+
+    <script src="libs/axios/dist/axios.min.js"></script>
+
+    <script src="js/common.js"></script>
+  </body>
+</html>

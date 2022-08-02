@@ -237,6 +237,9 @@ p {
   margin-bottom: 0;
 }
 
+.vert-line {
+  position: relative;
+}
 .vert-line::before {
   content: "";
   position: absolute;
@@ -254,6 +257,9 @@ p {
   display: block;
 }
 
+.horizon-line {
+  position: relative;
+}
 .horizon-line::after {
   content: "";
   position: absolute;

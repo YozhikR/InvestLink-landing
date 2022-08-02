@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--	 <base href="/">-->
+
+    <title>InvestLink - TradingView</title>
+    <meta name="description" content="InvestLink - Инвестиционный консалтинг" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="icon" href="images/favicon.ico" />
+    <meta property="og:image" content="images/preview.jpg" />
+
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css" />
+
+    <!-- Fonts	 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="libs/fontawesome/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="libs/css-hamburgers/dist/hamburgers.min.css" />
+    <link rel="stylesheet" href="libs/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="libs/slick-carousel/slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="css/main.css?5v" />
+    <link rel="stylesheet" href="css/about.css?4v" />
+    <link rel="stylesheet" href="css/media.css?4v" />
+  </head>
+
+  <body style="background: #F7F7F7;">
+    <div class="mobile-menu">
+      <div class="mobile-container">
+        <nav class="mobile-menu__link">
+          <a href="/">Главная</a>
+          <a href="/about.html" class="nav-link">О нас</a>
+			  <a href="/invest-consulting.html" class="nav-link">Консалтинг</a>
+			  <a href="/soprovozhdenie.html" class="nav-link">Сопровождение</a>
+			  <a href="/funds.html" class="nav-link">Хедж-фонды</a>
+			  <a href="/pre-ipo.html" class="nav-link">Pre-IPO</a>
+        </nav>
+        <div class="mobile-menu__bottom horizon-line">
+          <a href="https://app.investlink.io/auth/sign-up" class="btn btn-outline"
+            >Регистрация</a
+          >
+          <a href="https://app.investlink.io/auth/sign-in" class="btn btn-accent"
+            >Войти</a
+          >
+        </div>
+        <!-- /.mobile-menu__bottom -->
+      </div>
+      <!-- /.mobile-container -->
+    </div>
+    <!-- /.mobile-menu -->
+
+    <div class="top-line">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-2 col-6">
+            <a href="/" class="top-line__brand">
+							<img
+                class="brand"
+                src="images/brand.svg"
+                alt="InvestLink - Logo"
+              />
+              <img
+                class="brand-white"
+                src="images/brand-white.svg"
+                alt="InvestLink - Logo"
+              />
+						</a>
+            </a>
+          </div>
+          <!-- /.col-lg-3 -->
+          <div class="col-lg-8 d-lg-block d-none">
+            <nav class="top-line__nav">
+              <a href="/about.html" class="nav-link">О нас</a>
+			  <a href="/invest-consulting.html" class="nav-link">Консалтинг</a>
+			  <a href="/soprovozhdenie.html" class="nav-link">Сопровождение</a>
+			  <a href="/funds.html" class="nav-link">Хедж-фонды</a>
+			  <a href="/pre-ipo.html" class="nav-link">Pre-IPO</a>
+            </nav>
+          </div>
+          <!-- /.col-lg-6 -->
+          <div class="col-lg-2 col-6">
+            <div class="top-line__account d-lg-block d-md-none d-none">
+              <ul class="account-link">
+                <li><a href="https://app.investlink.io/auth/sign-in">Войти</a></li>
+                <li>
+                  <a href="https://app.investlink.io/auth/sign-up">Регистрация</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="hamburger-wrapper d-lg-none d-md-block">
+              <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+            <!-- /.hamburger-wrapper -->
+          </div>
+          <!-- /.col-lg-3 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.top-line -->
+
+		<section class="preipo-idea__wrapper">
+			<div class="container">
+				<div class="preipo-idea">
+					<div class="preipo-idea__main">
+
+						<div class="preipo-header">
+							<div class="preipo-header__top">
+								<div class="preipo-header__logo vert-line">
+									<div class="preipo-logo">
+										<img src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/Icon_TradingView.png" alt="Icon_TradingView">
+									</div>
+									<div class="preipo-title">TradingView</div>
+								</div>
+								<div class="preipo-header__slogan">
+									Инвестиционно–аналитическая платформа
+								</div>
+							</div>
+							<div class="preipo-header__bottom">
+								<div class="preipo-tag">
+									<span class="tag">Trading</span>
+									<span class="tag">IT</span>
+								</div>
+								<div class="preipo-link">
+									<a target="_blank" href="https://www.tradingview.com/"><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M8.33301 11.3335C8.69088 11.8119 9.14747 12.2078 9.6718 12.4943C10.1961 12.7807 10.7759 12.9511 11.3719 12.9937C11.9678 13.0364 12.566 12.9504 13.1258 12.7416C13.6856 12.5328 14.1939 12.206 14.6163 11.7835L17.1163 9.28347C17.8753 8.49763 18.2953 7.44512 18.2858 6.35263C18.2763 5.26014 17.8381 4.21509 17.0656 3.44256C16.2931 2.67002 15.248 2.23182 14.1555 2.22233C13.063 2.21283 12.0105 2.63281 11.2247 3.3918L9.79134 4.8168" stroke="#5C6E8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M11.6668 9.66653C11.309 9.18809 10.8524 8.79221 10.328 8.50575C9.80371 8.21928 9.22391 8.04893 8.62796 8.00625C8.03201 7.96357 7.43384 8.04956 6.87405 8.25838C6.31425 8.4672 5.80591 8.79397 5.3835 9.21653L2.8835 11.7165C2.12451 12.5024 1.70453 13.5549 1.71402 14.6474C1.72352 15.7399 2.16172 16.7849 2.93426 17.5574C3.70679 18.33 4.75184 18.7682 5.84433 18.7777C6.93682 18.7872 7.98932 18.3672 8.77517 17.6082L10.2002 16.1832" stroke="#5C6E8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>https://www.tradingview.com/</a>
+								</div>
+							</div>
+						</div>
+						<!-- /.preipo-header -->
+
+						<div class="preipo-card__image-block card">
+							<img src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/cover-TradingView.png" alt="cover-TradingView" />
+						</div>
+
+						<div class="preipo-card__pdf card">
+							<div class="preipo-card__pdf-img">
+								<img src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/union.svg" alt="Union">
+							</div>
+							<div class="preipo-card__pdf-text">
+								<h6>Презнтация инвестиционной идеи TradingView
+									</h6>
+									<span>PDF, 3.4 MB</span>
+							</div>
+							<div class="preipo-card__pdf-btn">
+								<a target="_blank" href="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/TradingView-+Pre-IPO.pdf">Скачать</a>
+							</div>
+						</div>
+						<!-- /.preipo-card__pdf -->
+						
+						<div class="preipo-card-exit-to-ipo card">
+							<h4 class="preipo-card__headline">Выход на IPO</h4>
+							<div class="preipo-card-exit-to-ipo__inside-wrapper">
+								<div class="preipo-card-exit-to-ipo__item card-statistic">
+									<h6>2024 г</h6>
+									<span>Ожидаемый срок выхода на IPO</span>
+								</div>
+								<div class="preipo-card-exit-to-ipo__item card-statistic">
+									<h6>200-300%</h6>
+									<span>Ожидаемая доходность сделки</span>
+								</div>
+							</div>
+						</div>
+						<!-- /.preipo-card-exit-to-ipo -->
+						<div class="preipo-card-about card">
+							<h4 class="preipo-card__headline">О компании</h4>
+							<h5 class="preipo-card__quote">
+								TradingView — это облачная платформа для построения графиков и их
+								отслеживания, а также профессиональная соцсеть для игроков рынка.
+								Площадка предназначена как для начинающих, так и для опытных
+								инвесторов.
+							</h5>
+							<p>
+								Сервис был запущен в форме открытой платформы для обмена
+								инвестиционными рекомендациями. На ней пользователи могли
+								подписываться друг на друга, писать сообщения, а также публиковать
+								прогнозы по изменению курса активов.
+							</p>
+							<p>
+								Основное преимущество платформы кроется в количестве доступных
+								инструментов и настроек. Так, для определения трендов на рынке
+								используются технические индикаторы — функции, которые учитывают
+								статистические показатели торгов. В TradingView насчитывается больше
+								сотни встроенных индикаторов . Кроме того, пользователь может
+								использовать язык для Pine Script и создавать технические индикаторы
+								с нуля — на платформе их тысячи.
+							</p>
+							<p>
+								Платформа TradingView встраивается через API в системы таких
+								брокеров как
+								<strong
+									>Interactive Brokers, Saxo, Tradestation, FTX, OANDA, FXCM</strong
+								>
+								и многие другие.
+							</p>
+							<p>
+								На сегодняшний день сервисом пользуются более
+								<b>30 млн. пользователей в месяц</b> (из них 1 млн платят за
+								подписку), сайт официально является
+								<strong>самым популярным</strong> в мире веб-сайтом по
+								инвестированию, согласно данным SimilarWeb (по состоянию на май 2022
+								года). В платформе насчитывается <strong>более 8 млн.</strong>
+								индивидуальных сценариев и идей, которыми делятся пользователи.
+							</p>
+							<p>
+								Сейчас у компании есть пользователи почти
+								<strong>в каждой стране мира</strong>, в том числе в Антарктиде
+								(согласно данным по IP).
+							</p>
+							<p>
+								По оценке Forbes, в 2021-м компания получила более
+								<strong>$230 млн выручки</strong>
+								(90% ее приходится на платные подписки), при этом основатели
+								утверждают, что компания уже прибыльна.
+							</p>
+						</div>
+						<!-- /.preipo-card-about -->
+						<div class="preipo-card-ceo card">
+							<h4 class="preipo-card__headline">CEO компании</h4>
+							<div class="preipo-card-ceo__inside-wrapper">
+								<div class="preipo-card-ceo__img">
+									<img
+										src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/denis.png"
+										alt="Sri"
+									/>
+								</div>
+								<div class="preipo-card-ceo__text">
+									<h5 class="preipo-card__quote">
+										DENIS GLOBA
+										<span>CEO, TradingView</span>
+									</h5>
+									<p>
+										Основатель и СЕО MultiCharts и TradingView. Имеет более 15 лет
+										опыта торговли разными классами активов, создал торговую
+										платформу MultiCharts и онлайн-сообщество трейдеров TradingView,
+										цель которых - предоставить трейдерам все возможности для
+										разработки своих систем торговли.
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- /.preipo-card-ceo -->
+						<div class="trading-view-platform card">
+							<h4 class="preipo-card__headline">О платформе</h4>
+							<div class="trading-view-platform__inside">
+								<div class="trading-view-platform__item">
+									<div class="trading-view-platform__item-img">
+										<img
+											src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/platform-1.png"
+											alt="TradingView"
+										/>
+									</div>
+									<div class="trading-view-platform__item-description">
+										<h5>Инструменты для тех анализа</h5>
+										<ul class="preipo-card__list">
+											<li>
+												100+ предварительно созданных наиболее популярных
+												индикаторов
+											</li>
+											<li>100 000+ индикаторов, созданных сообществом</li>
+											<li>
+												50+ интеллектуальных инструментов для построения графиков
+											</li>
+											<li>Индикаторы профиля объема</li>
+											<li>Распознавание свечных моделей</li>
+											<li>Мультитаймфреймовый анализ</li>
+										</ul>
+										<!-- /.preipo-card__list -->
+									</div>
+								</div>
+								<!-- /.trading-view-platform__item -->
+								<div class="trading-view-platform__item">
+									<div class="trading-view-platform__item-img">
+										<img
+											src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/platform-2.png"
+											alt="TradingView"
+										/>
+									</div>
+									<div class="trading-view-platform__item-description">
+										<h5>Уведомления</h5>
+										<ul class="preipo-card__list">
+											<li>Оповещения для каждого устройства</li>
+											<li>12 условий оповещения</li>
+											<li>Оповещения по цене, индикаторам и стратегиям</li>
+											<li>Оповещения Pine Script™</li>
+											<li>Push- и webhook-уведомления</li>
+										</ul>
+										<!-- /.preipo-card__list -->
+									</div>
+								</div>
+								<!-- /.trading-view-platform__item -->
+								<div class="trading-view-platform__item">
+									<div class="trading-view-platform__item-img">
+										<img
+											src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/platform-3.png"
+											alt="TradingView"
+										/>
+									</div>
+									<div class="trading-view-platform__item-description">
+										<h5>Проверка торговых стратегий</h5>
+										<ul class="preipo-card__list">
+											<li>Подробные отчеты о результатах работы вашей стратегии</li>
+											<li>
+												Гибкое создание и настройка стратегии с помощью Pine Script™
+											</li>
+											<li>Отслеживание исполненного ордера прямо на графике</li>
+											<li>
+												Изменение параметров стратегии с помощью
+												форвард-тестирования
+											</li>
+											<li>
+												Возможность обмена отчетами о работе стратегии с другими
+												пользователями
+											</li>
+										</ul>
+										<!-- /.preipo-card__list -->
+									</div>
+								</div>
+								<!-- /.trading-view-platform__item -->
+								<div class="trading-view-platform__item">
+									<div class="trading-view-platform__item-img">
+										<img
+											src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/platform-4.png"
+											alt="TradingView"
+										/>
+									</div>
+									<div class="trading-view-platform__item-description">
+										<h5>Комплексный финансовый анализ</h5>
+										<ul class="preipo-card__list">
+											<li>100+ фундаментальных полей и коэффициентов</li>
+											<li>Финансовая отчетность</li>
+											<li>Анализ оценки</li>
+											<li>
+												Исторические данные, которые можно применить прямо на
+												графике
+											</li>
+											<li>Глобальное освещение рынка</li>
+										</ul>
+										<!-- /.preipo-card__list -->
+									</div>
+								</div>
+								<!-- /.trading-view-platform__item -->
+								<div class="trading-view-platform__item">
+									<div class="trading-view-platform__item-img">
+										<img
+											src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/platform-5.png"
+											alt="TradingView"
+										/>
+									</div>
+									<div class="trading-view-platform__item-description">
+										<h5>Единый хитмап</h5>
+										<ul class="preipo-card__list">
+											<li>Большой выбор фондовых и криптовалютных рынков</li>
+											<li>
+												Группировка по секторам с возможностью детального изучения
+												каждого из них
+											</li>
+											<li>Набор фильтров для уточнения выбора</li>
+											<li>Совместное использование хитмапов</li>
+											<li>
+												Просмотр выбранных акций или криптовалют с ключевыми
+												статистическими данными
+											</li>
+										</ul>
+										<!-- /.preipo-card__list -->
+									</div>
+								</div>
+								<!-- /.trading-view-platform__item -->
+								<div class="trading-view-platform__item">
+									<div class="trading-view-platform__item-img">
+										<img
+											src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/platform-6.png"
+											alt="TradingView"
+										/>
+									</div>
+									<div class="trading-view-platform__item-description">
+										<h5>Сканнер и фильтры</h5>
+										<ul class="preipo-card__list">
+											<li>50+ фондовых бирж</li>
+											<li>Три фильтра: акции, криптовалюты и валютные пары</li>
+											<li>100+ полей фильтра</li>
+											<li>
+												Множество таймфреймов: от одной минуты до одного месяца
+											</li>
+											<li>Оповещения, когда символ соответствует критериям</li>
+										</ul>
+										<!-- /.preipo-card__list -->
+									</div>
+								</div>
+								<!-- /.trading-view-platform__item -->
+								<div class="trading-view-platform__item">
+									<div class="trading-view-platform__item-img">
+										<img
+											src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/platform-7.png"
+											alt="TradingView"
+										/>
+									</div>
+									<div class="trading-view-platform__item-description">
+										<h5>Социальная сеть и стриминг торговли</h5>
+										<p>
+											Исследование лучших торговых идей от всего сообщества или
+											создание собственного анализа и стимулирование других.
+										</p>
+										<!-- /.preipo-card__list -->
+									</div>
+								</div>
+								<!-- /.trading-view-platform__item -->
+							</div>
+						</div>
+						<!-- /.trading-view-platform -->
+						<div class="preipo-card-business-model card">
+							<h4 class="preipo-card__headline">Бизнес модель</h4>
+							<ul class="preipo-card__list business-model-list">
+								<li>
+									Компания работает по бизнес-модели freemium, позволяя трейдерам
+									использовать все основные функции без необходимости платить.
+								</li>
+								<li>
+									Подход freemium позволяет TradingView увеличить скорость роста
+									своей пользовательской базы. Кроме того, пользователи становятся
+									сторонниками платформы, что повышает ее популярность как среди
+									розничных инвесторов, так и среди бизнес-клиентов.
+								</li>
+								<li>
+									Если трейдеры хотят получить доступ к более сложным функциям, они
+									могут выбрать один из многочисленных планов подписки компании.
+								</li>
+							</ul>
+							<!-- /.preipo-card__list -->
+							<ul class="preipo-card__list">
+								<h5>Абонентская плата:</h5>
+								<li>
+									Планы предоставляют пользователям различные преимущества, такие
+									как просмотр без рекламы, различное количество сохраненных
+									графиков, доступ к различным технологиям построения графиков, а
+									также к индикаторам, оповещения о ценах и многое другое.
+								</li>
+								<li>
+									Следовательно, планы подписки рассчитаны на искушенных трейдеров,
+									которые, по всей вероятности, торгуют на постоянной основе.
+								</li>
+								<li>
+									Однако благодаря тому, что цены на это программное обеспечение
+									значительно ниже, чем на конкурирующие программы, такие как
+									Bloomberg Terminal, TradingView может привлечь гораздо большее
+									количество людей к своим платным планам.
+								</li>
+								<li>
+									Одно из преимуществ TradingView - в том, что существует своя
+									социальная сеть. Трейдеры могут делиться друг с другом советами и
+									участвовать в группе единомышленников, к которой раньше у них не
+									было доступа.
+								</li>
+							</ul>
+							<!-- /.preipo-card__list -->
+							<ul class="preipo-card__list">
+								<h5>Реклама:</h5>
+								<li>
+									Помимо подписки, TradingView также может монетизировать
+									пользователей, которые не платят за свои премиум-планы.
+								</li>
+								<li>
+									Это можно сделать с помощью рекламных баннеров, которые
+									размещаются на всей торговой платформе. Объявления показываются на
+									графиках, а также в разделах идей или комментариев.
+								</li>
+								<li>
+									За месяц платформу посещают более 200 миллионов раз, при этом
+									среднее пользовательское экранное время - около 20 минут.
+								</li>
+								<li>
+									Аудитория не просто вовлечена, но и имеет очень специфический
+									набор интересов по части торговли финансовыми активами. Это может
+									сделать TradingView выгодным рекламным партнером для таких бирж,
+									как FTX или E*Trade, которым важно выходить именно на эту
+									аудиторию.
+								</li>
+								<li>
+									А поскольку реклама может быть географически сегментирована, они
+									могут быть уверены, что нацелены только на целевую демографическую
+									группу (в данном случае на США).
+								</li>
+							</ul>
+							<!-- /.preipo-card__list -->
+							<ul class="preipo-card__list">
+								<h5>Лицензионные сборы:</h5>
+								<li>
+									Еще одним источником дохода для TradingView являются лицензионные
+									платежи порталов, которые хотят получить доступ к ее графикам (и
+									финансовым данным в целом).
+								</li>
+								<li>
+									Пользователи на их платформах могут взаимодействовать с графиками,
+									например, увеличивая масштаб или изменяя диапазоны дат.
+								</li>
+								<li>
+									TradingView не только получает доход от этих решений по построению
+									графиков, но сами решения служат дополнительным маркетинговым
+									каналом для платформы. Так, название фирмы отображается на видном
+									месте в нижней части графика, что позволяет посетителям перейти на
+									платформу.
+								</li>
+							</ul>
+							<!-- /.preipo-card__list -->
+							<ul class="preipo-card__list">
+								<h5>Реферальные сборы:</h5>
+								<li>
+									TradingView также зарабатывает на реферальных комиссионных,
+									которые она получает за продвижение других брокерских компаний и
+									бирж.
+								</li>
+								<li>
+									Как уже говорилось ранее, TradingView позволяет интегрировать
+									брокеров в свою платформу, что позволяет пользователям размещать
+									сделки непосредственно в TradingView.
+								</li>
+								<li>
+									Кроме того, брокеры также смогут создать свой собственный профиль
+									брокера, который позволит им делиться торговыми идеями,
+									рекламировать свою компанию, создавать пользовательские индикаторы
+									и общаться с пользователями платформы. Кроме того, TradingView
+									проводит ежегодные премии, которые награждают брокеров в отдельных
+									категориях, таких как "Социальный чемпион" или "Самая
+									инновационная технология".
+								</li>
+								<li>
+									Каждый раз, когда пользователь регистрирует новый счет и совершает
+									сделку, TradingView получает реферальное вознаграждение за
+									привлечение дополнительного пользователя.
+								</li>
+							</ul>
+							<!-- /.preipo-card__list -->
+						</div>
+						<!-- /.business-model -->
+						<div class="preipo-card-prospects card">
+							<h4 class="preipo-card__headline">Перспективы рынка</h4>
+							<ul class="preipo-card__list">
+								<li>
+									В мире насчитывается более 1 млрд. розничных торговых счетов,
+									стоимость которых составляет $8,5 триллионов.
+								</li>
+								<li>
+									Демократизация доступа к финансовому миру - одна из самых мощных
+									тенденций в сфере финансов.
+								</li>
+								<li>
+									Самостоятельное инвестирование особенно активно развивается в США,
+									но сейчас оно распространяется по всему миру. Это обусловлено
+									несколькими основными тенденциями: молодое поколение ожидает, что
+									оно будет автономным и сможет делать все самостоятельно с помощью
+									приложений, а также не доверяет банковской и финансовой системе.
+									Поэтому они стекаются на платформы нео-брокеров и сами учатся
+									инвестировать.
+								</li>
+							</ul>
+							<!-- /.preipo-card__list -->
+						</div>
+						<!-- /.preipo-card-prospects -->
+						<div class="preipo-card-revenue card">
+							<h4 class="preipo-card__headline">Выручка</h4>
+							<div class="preipo-card-revenue__diagram">
+								<img
+									style="width: 100%"
+									src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/trading-view-diag-1.png"
+									alt="Diagramma"
+								/>
+							</div>
+							<h4 class="preipo-card__headline">Капитализация</h4>
+							<div class="preipo-card-revenue__diagram">
+								<img
+									style="width: 100%"
+									src="https://investlink-static.s3.eu-central-1.amazonaws.com/preipo/preipo/trading-view/trading-view-diag-2.png"
+									alt="Diagramma"
+								/>
+							</div>
+							<div class="preipo-card-prompt">
+								<p>
+									*Прогнозные данные на основе CAGR (Compound annual growth rate) —
+									совокупный среднегодовой темп роста рынка ИИ.
+								</p>
+							</div>
+						</div>
+						<!-- /.preipo-card-revenue -->
+						<div class="preipo-card-risks card">
+							<h4 class="preipo-card__headline">Риски</h4>
+							<p>
+								Все материалы, опубликованные от имени компании, и содержащиеся в
+								них сведения, носят исключительно информационный характер и не могут
+								рассматриваться ни как приглашение или побуждение сделать оферту, ни
+								как просьба купить или продать ценные бумаги/другие финансовые
+								инструменты или осуществлять какую-либо иную инвестиционную
+								деятельность. Представленная информация подготовлена на основе
+								источников, которые, по мнению авторов, являются надёжными, но при
+								этом отражает исключительно мнение авторов относительно
+								анализируемых объектов. Несмотря на то, что материал был подготовлен
+								с максимально возможной тщательностью, ни его авторы, ни компания не
+								заявляют ни прямо, ни косвенно об его точности и полноте и не
+								гарантируют их. Любая информация и любые суждения, приведённые в
+								данном материале, являются суждениями, актуальными на момент
+								публикации настоящего материала, и могут быть изменены без
+								предупреждения. Ни компания, ни ее сотрудники не несут
+								ответственности за какие- либо потери, возникшие в результате
+								использования настоящего материала и в любой другой связи с ним.
+							</p>
+						</div>
+						<!-- /.preipo-card-risks -->
+
+					</div>
+					<div class="preipo-idea__aside">
+						<div class="preipo-status card"><div class="status status-green"><span>Активная сделка</span> <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_5487_51520)">
+							<path d="M8.62664 12.1968C9.09899 11.2694 9.80143 10.2425 10.5909 9.27739C8.55226 9.1108 5.57113 8.84809 4.31848 10.7697C3.00275 12.7881 2.83401 13.0466 2.83401 13.0466C1.77534 14.6525 3.3703 16.3501 6.37883 16.8194L7.00037 16.9164C7.39313 16.9777 7.78197 16.9942 8.16124 16.9716C7.52492 16.0065 7.68324 14.0483 8.62664 12.1968Z" stroke="#4EEF71" stroke-width="1.5" stroke-linecap="round"/>
+							<path d="M12.6492 21.2139C12.6336 21.2087 12.6179 21.2034 12.6018 21.1978M19.905 18.5737C18.9229 19.381 17.873 20.0943 16.9274 20.5623C15.3698 21.3335 13.744 21.5562 12.7006 21.2304C13.7557 21.5497 15.4207 21.2965 17.0239 20.4832C19.2648 19.3462 22.0963 16.8688 23.3155 14.9789C24.5351 13.0886 25.5976 9.69299 25.6777 7.433C25.7573 5.17344 23.9731 3.38929 21.7135 3.46888C19.454 3.54848 16.0858 4.60888 14.229 5.82543C12.3722 7.04198 9.89515 9.87305 8.72471 12.1169C7.55383 14.3613 7.49641 16.7387 8.59683 17.4007C9.69725 18.0627 11.1269 19.4924 11.7741 20.578C11.8785 20.7528 12.0286 20.8985 12.2147 21.0151C12.1912 21.397 12.2078 21.7884 12.2695 22.1842L12.3665 22.8058C12.8358 25.8143 14.5334 27.4093 16.1393 26.3506C16.1393 26.3506 16.1393 26.3506 18.4162 24.8661C20.3422 23.6091 20.0716 20.6123 19.905 18.5737Z" stroke="#4EEF71" stroke-width="1.5" stroke-linecap="round"/>
+							<path d="M16.8295 12.3563C17.8384 13.3652 19.4741 13.3652 20.483 12.3563C21.4919 11.3474 21.4919 9.71166 20.483 8.70276C19.4741 7.69385 17.8384 7.69385 16.8295 8.70276C15.8206 9.71166 15.8206 11.3474 16.8295 12.3563Z" stroke="#4EEF71" stroke-width="1.5" stroke-linecap="round"/>
+							<path d="M1.58627 22.2257L3.37695 20.4351" stroke="#4EEF71" stroke-width="1.5" stroke-linecap="round"/>
+							<path d="M6.03593 23.1286L7.82617 21.3384" stroke="#4EEF71" stroke-width="1.5" stroke-linecap="round"/>
+							<path d="M6.94999 27.6086L8.74023 25.8184" stroke="#4EEF71" stroke-width="1.5" stroke-linecap="round"/>
+							</g>
+							<defs>
+							<clipPath id="clip0_5487_51520">
+							<rect width="30" height="30" fill="white"/>
+							</clipPath>
+							</defs>
+							</svg></div></div>
+
+						<div class="card-info card ng-star-inserted"><div class="card-info-inset d-flex"><div class="preipo-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20.7507 13.3335C20.7507 12.9193 20.4149 12.5835 20.0007 12.5835C19.5864 12.5835 19.2507 12.9193 19.2507 13.3335L20.7507 13.3335ZM23.9559 24.8164C24.3146 25.0235 24.7733 24.9005 24.9804 24.5418C25.1875 24.1831 25.0646 23.7244 24.7059 23.5173L23.9559 24.8164ZM4.53213 4.83118C4.20868 5.08994 4.15624 5.5619 4.415 5.88535C4.67376 6.2088 5.14573 6.26124 5.46917 6.00248L4.53213 4.83118ZM9.63584 2.66915C9.95929 2.41039 10.0117 1.93842 9.75297 1.61497C9.49421 1.29153 9.02224 1.23909 8.6988 1.49784L9.63584 2.66915ZM34.5321 6.00248C34.8556 6.26124 35.3275 6.2088 35.5863 5.88535C35.8451 5.5619 35.7926 5.08994 35.4692 4.83118L34.5321 6.00248ZM31.3025 1.49784C30.9791 1.23909 30.5071 1.29153 30.2483 1.61497C29.9896 1.93842 30.042 2.41039 30.3655 2.66915L31.3025 1.49784ZM22.0007 22.8215L22.3757 22.172L22.0007 22.8215ZM20.2686 21.5121L20.9181 21.1371L20.2686 21.5121ZM19.2507 13.3335L19.2507 19.3574H20.7507V13.3335L19.2507 13.3335ZM24.7059 23.5173L22.3757 22.172L21.6257 23.471L23.9559 24.8164L24.7059 23.5173ZM35.9173 20.0002C35.9173 28.7907 28.7912 35.9168 20.0007 35.9168V37.4168C29.6196 37.4168 37.4173 29.6191 37.4173 20.0002H35.9173ZM20.0007 35.9168C11.2101 35.9168 4.08398 28.7907 4.08398 20.0002H2.58398C2.58398 29.6191 10.3817 37.4168 20.0007 37.4168V35.9168ZM4.08398 20.0002C4.08398 11.2096 11.2101 4.0835 20.0007 4.0835V2.5835C10.3817 2.5835 2.58398 10.3812 2.58398 20.0002H4.08398ZM20.0007 4.0835C28.7912 4.0835 35.9173 11.2096 35.9173 20.0002H37.4173C37.4173 10.3812 29.6196 2.5835 20.0007 2.5835V4.0835ZM5.46917 6.00248L9.63584 2.66915L8.6988 1.49784L4.53213 4.83118L5.46917 6.00248ZM35.4692 4.83118L31.3025 1.49784L30.3655 2.66915L34.5321 6.00248L35.4692 4.83118ZM19.2507 19.3574C19.2507 19.9064 19.2498 20.372 19.2878 20.757C19.3273 21.1584 19.4131 21.5304 19.6191 21.8871L20.9181 21.1371C20.8561 21.0297 20.8079 20.888 20.7805 20.6098C20.7515 20.3152 20.7507 19.9355 20.7507 19.3574H19.2507ZM22.3757 22.172C21.875 21.8829 21.5466 21.6924 21.306 21.5199C21.0788 21.3571 20.9801 21.2445 20.9181 21.1371L19.6191 21.8871C19.825 22.2438 20.1043 22.5042 20.4322 22.7391C20.7466 22.9645 21.1503 23.1966 21.6257 23.471L22.3757 22.172Z" fill="#92A6B9"/>
+							</svg></div><div class="preipo-info"><span class="slogan">Идея актуальна</span><strong class="value">до 30 июля 2022</strong></div></div></div>
+
+						<div class="card-info card ng-star-inserted"><div class="card-info-inset d-flex"><div class="preipo-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.2497 29.6654C17.2497 30.0796 17.5855 30.4154 17.9997 30.4154C18.4139 30.4154 18.7497 30.0796 18.7497 29.6654H17.2497ZM18.7497 6.33203C18.7497 5.91782 18.4139 5.58203 17.9997 5.58203C17.5855 5.58203 17.2497 5.91782 17.2497 6.33203H18.7497ZM22.4956 11.8349C22.7027 12.1937 23.1614 12.3166 23.5201 12.1095C23.8788 11.9024 24.0017 11.4437 23.7946 11.0849L22.4956 11.8349ZM22.5191 10.3758L21.8696 10.7508L22.5191 10.3758ZM16.5498 17.4653L16.8087 16.7615L16.8087 16.7614L16.5498 17.4653ZM19.4499 18.5321L19.7088 17.8282L19.7088 17.8282L19.4499 18.5321ZM13.4806 25.6216L12.831 25.9966L13.4806 25.6216ZM13.5041 24.1625C13.297 23.8037 12.8383 23.6808 12.4796 23.8879C12.1209 24.095 11.998 24.5537 12.2051 24.9125L13.5041 24.1625ZM20.2128 27.4255L19.8378 26.776L20.2128 27.4255ZM15.7869 8.57189L16.1619 9.22141L15.7869 8.57189ZM33.9163 17.9987C33.9163 26.7892 26.7902 33.9154 17.9997 33.9154V35.4154C27.6186 35.4154 35.4163 27.6177 35.4163 17.9987H33.9163ZM17.9997 33.9154C9.20914 33.9154 2.08301 26.7892 2.08301 17.9987H0.583008C0.583008 27.6177 8.38072 35.4154 17.9997 35.4154V33.9154ZM2.08301 17.9987C2.08301 9.20817 9.20914 2.08203 17.9997 2.08203V0.582031C8.38072 0.582031 0.583008 8.37974 0.583008 17.9987H2.08301ZM17.9997 2.08203C26.7902 2.08203 33.9163 9.20817 33.9163 17.9987H35.4163C35.4163 8.37974 27.6186 0.582031 17.9997 0.582031V2.08203ZM23.7946 11.0849L23.1687 10.0008L21.8696 10.7508L22.4956 11.8349L23.7946 11.0849ZM14.1301 25.2466L13.5041 24.1625L12.2051 24.9125L12.831 25.9966L14.1301 25.2466ZM19.191 19.236C22.5158 20.4589 22.9058 25.0047 19.8378 26.776L20.5878 28.075C24.7571 25.6679 24.2272 19.4901 19.7088 17.8282L19.191 19.236ZM15.4119 7.92237C11.2426 10.3295 11.7725 16.5073 16.2909 18.1692L16.8087 16.7614C13.4839 15.5385 13.094 10.9927 16.1619 9.22141L15.4119 7.92237ZM18.7497 29.6654V28.0804H17.2497V29.6654H18.7497ZM18.7497 28.0804V17.9987H17.2497V28.0804H18.7497ZM19.8378 26.776C19.2432 27.1193 18.6014 27.2993 17.9621 27.3314L18.0373 28.8295C18.9086 28.7858 19.7825 28.54 20.5878 28.075L19.8378 26.776ZM17.9621 27.3314C16.4438 27.4076 14.9407 26.6507 14.1301 25.2466L12.831 25.9966C13.934 27.907 15.9789 28.9328 18.0373 28.8295L17.9621 27.3314ZM16.2908 18.1692L17.7407 18.7026L18.2586 17.2948L16.8087 16.7615L16.2908 18.1692ZM17.7408 18.7026L19.1911 19.236L19.7088 17.8282L18.2586 17.2948L17.7408 18.7026ZM18.7497 17.9987L18.7497 7.91699H17.2497L17.2497 17.9987H18.7497ZM18.7497 7.91699V6.33203H17.2497V7.91699H18.7497ZM23.1687 10.0008C22.0656 8.09028 20.0206 7.06449 17.962 7.16793L18.0373 8.66604C19.5557 8.58974 21.0589 9.34658 21.8696 10.7508L23.1687 10.0008ZM17.962 7.16793C17.0909 7.21171 16.2171 7.4575 15.4119 7.92237L16.1619 9.22141C16.7564 8.87818 17.3981 8.69816 18.0373 8.66604L17.962 7.16793Z" fill="#92A6B9"></path></svg></div><div class="preipo-info"><span class="slogan">цена за акцию</span><strong class="value">1&nbsp;531$</strong></div></div><div class="preipo-action text-center mt-3"><a target="_blank" href="https://app.investlink.io/cabinet/ideas/pre-ipo/13" class="btn btn-color w-100">Инвестировать</a><p>$20 000 минимальная сумма инвестиций</p></div></div>
+
+						<div class="company-profile-section card"><h4 class="preipo-card__headline">Профиль компании</h4><ul class="horizon-line"><li class="horizon-line ng-star-inserted"><span>Капитализация</span><span>$4 млрд</span></li><!----><li class="horizon-line ng-star-inserted"><span>Суммарный объем инвестиций</span><span>$578 млн</span></li><!----><!----><!----><li class="horizon-line ng-star-inserted"><span>Последний раунд инвестиций</span><span>Series E-1</span></li><!----><li class="horizon-line ng-star-inserted"><span>Дата последнего раунда</span><span>March 2021</span></li><!----><li class="horizon-line ng-star-inserted"><span>Объем инвестиций на последнем раунде</span><span>$20 млн</span></li><!----><li class="horizon-line ng-star-inserted"><span>Год основания компании</span><span>2012</span></li><!----><li class="ng-star-inserted"><span>Кол-во сотрудников</span><span>600</span></li><!----></ul></div>
+
+						<div class="dealings-section card"><h4 class="preipo-card__headline">Условия сделки</h4><ul class="horizon-line"><li class="horizon-line ng-star-inserted"><span>минимальная сумма инвестиций</span><span>$20 000</span><a href="#" class="dealings-section-info d-none"><svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 11V17M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#92A6B9" stroke-width="1.5" stroke-linecap="round"></path><path d="M13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8Z" fill="#92A6B9"></path></svg></a></li><!----><li class="horizon-line d-none"><span>объем сделки</span><span>150&nbsp;000$</span><div class="d-none"><p>AI-платформа по обнаружению цифрового мошенничества в онлайн-режиме.</p><p> Модели машинного обучения Sift в реальном времени оценивают каждое действие потенциального злоумышленника. </p><a href="#" class="to-learn-more">Узнать больше</a></div><a href="#" class="dealings-section-info d-none"><svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 11V17M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#92A6B9" stroke-width="1.5" stroke-linecap="round"></path><path d="M13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8Z" fill="#92A6B9"></path></svg></a></li><!----><li class="horizon-line ng-star-inserted"><span>Срок подачи заявок</span><span>до 30.07.2022</span><a href="#" class="dealings-section-info d-none"><svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 11V17M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#92A6B9" stroke-width="1.5" stroke-linecap="round"></path><path d="M13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8Z" fill="#92A6B9"></path></svg></a></li><!----><li class="horizon-line d-none"><span>тип сделки</span><span>SPV</span><a href="#" class="to-learn-more">Узнать больше</a></li><li><span>Комиссии</span><span>6% / 20%</span><a href="#" class="dealings-section-info d-none"><svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 11V17M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#92A6B9" stroke-width="1.5" stroke-linecap="round"></path><path d="M13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8Z" fill="#92A6B9"></path></svg></a></li></ul><a href="#" class="btn btn-outline d-none">Об условиях подробней</a></div>
+
+					</div>
+				</div>
+			</div>
+			<!-- /.container -->
+		</section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="main-footer__inside">
+          <div class="footer-left">
+            <a href="/" class="footer-left__logo">
+              <img src="images/brand.svg" alt="InvestLink" />
+            </a>
+            <div class="footer-right__year">
+              © 2022 INVESTLINK. Все права зарегистрированы.
+            </div>
+          </div>
+          <div class="footer-center">
+            <nav class="footer-center__menu">
+              <h4>Решения</h4>
+              <a href="invest-consulting.html">Консалтинг</a>
+              <a href="soprovozhdenie.html">Сопровождение</a>
+              <a href="pre-ipo.html">Pre-IPO</a>
+              <a href="funds.html">Фонды</a>
+            </nav>
+            <nav class="footer-center__menu">
+              <h4>О нас</h4>
+              <a href="about.html">О компании</a>
+              <a href="contacts.html">Контакты</a>
+            </nav>
+          </div>
+          <div class="footer-right">
+            <ul class="footer-right__social">
+              <li>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-telegram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- /.main-footer__inside -->
+				<div class="main-footer__disclaimer">
+					<p>Инвестиции в финансовые инструменты на рынке ценных бумаг сопряжены с рисками. К таким рискам относятся получение прибыли, отличающейся от ожидаемой, получение убытков или потеря капитала частично или целиком. Так же, как и менеджмент публичных компаний, менеджмент INVESTLINK не несет личной ответственности перед акционерами и инвесторами.</p>
+					<p>Хедж-фонды и PRE-IPO являются инструментами с повышенным риск-профилем и нацелены на получение сверх-рыночной доходности. Прежде чем инвестировать в любые финансовые инструменты, убедитесь в том, что вы полностью понимаете и принимаете риски, связанные с инвестицией.</p>
+					<p>В презентации используется информация об исторической доходности. Историческая доходность используется только как ориентир для будущих доходов. Историческая доходность не является гарантией будущего дохода. В презентации используются заявления о прогнозируемой доходности в будущем. Такие заявления используются как примеры, и не должны расцениваться как инвестиционные рекомендации.</p>
+				</div>
+      </div>
+      <!--	container	-->
+    </footer>
+    <!--footer	-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0CD6YKYDRL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-0CD6YKYDRL");
+    </script>
+
+    <script src="libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="libs/gsap/dist/gsap.min.js"></script>
+    <script src="libs/gsap/dist/DrawSVGPlugin.min.js"></script>
+    <script src="libs/gsap/dist/CSSRulePlugin.min.js"></script>
+    <script src="libs/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="libs/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script src="libs/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script src="libs/slick-carousel/slick/slick.min.js"></script>
+
+    <script src="libs/axios/dist/axios.min.js"></script>
+
+    <script src="js/common.js"></script>
+  </body>
+</html>

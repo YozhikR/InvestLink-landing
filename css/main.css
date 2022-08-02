@@ -242,6 +242,10 @@ p {
   margin-bottom: 0;
 }
 
+.vert-line {
+  position: relative;
+}
+
 .vert-line::before {
   content: "";
   position: absolute;
@@ -252,6 +256,10 @@ p {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(224, 225, 226, 0)), color-stop(29.4%, #e0e1e2), color-stop(68.09%, hsla(210deg, 3%, 88%, 0.877)), color-stop(99.04%, hsla(210deg, 3%, 88%, 0.156)));
   background: linear-gradient(0deg, rgba(224, 225, 226, 0), #e0e1e2 29.4%, hsla(210deg, 3%, 88%, 0.877) 68.09%, hsla(210deg, 3%, 88%, 0.156) 99.04%);
   display: block;
+}
+
+.horizon-line {
+  position: relative;
 }
 
 .horizon-line::after {
@@ -476,6 +484,7 @@ p {
 }
 
 .mobile-menu {
+  display: none;
   position: fixed;
   top: 70px;
   left: 0;
@@ -662,119 +671,11 @@ p {
   background: var(--bg-color);
   padding: 80px 0;
 }
-
-.footer-left__logo {
-  max-width: 203px;
-  width: 100%;
-  display: block;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
-}
-
-.footer-left__logo img {
-  width: 100%;
-  height: auto;
-}
-
-.footer-left__copy {
-  font-size: 16px;
-  margin-top: 30px;
-  color: #92a6b9;
-}
-
-.footer-center {
+.main-footer__inside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 30px;
 }
-
-.footer-center__menu h4 {
-  font-size: 24px;
-  color: var(--gray-color);
-  margin-bottom: 40px;
-  font-weight: 300;
-}
-
-.footer-center__menu ul {
-  display: block;
-}
-
-.footer-center__menu ul li {
-  display: block;
-}
-
-.footer-center__menu ul li a {
-  color: var(--text-black-color);
-  display: inline-block;
-  margin-bottom: 25px;
-  text-decoration: none;
-}
-
-.footer-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 100%;
-}
-
-.footer-right__social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  display: none;
-}
-
-.footer-right__social li {
-  display: block;
-  margin: 0 15px 20px 15px;
-}
-
-.footer-right__social li a {
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
-  -webkit-box-shadow: var(--main-box-shadow);
-          box-shadow: var(--main-box-shadow);
-  border-radius: 10em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: var(--transition-defult);
-  transition: var(--transition-defult);
-  text-decoration: none;
-}
-
-.footer-right__social li a .fa {
-  color: var(--accent);
-}
-
 .main-footer__disclaimer {
   margin-top: 80px;
   padding-top: 80px;
@@ -808,11 +709,13 @@ p {
     margin-bottom: 30px;
   }
 }
-
-.footer-right__year {
-  font-size: 14px;
-  text-align: right;
-  color: #92a6b9;
+@media (max-width: 1023px) {
+  .main-footer__inside {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .footer-left {
@@ -824,6 +727,145 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
+  width: 20%;
+}
+.footer-left__logo {
+  max-width: 203px;
+  width: 100%;
+  display: block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+}
+.footer-left__logo img {
+  width: 100%;
+  height: auto;
+}
+.footer-left__copy {
+  font-size: 16px;
+  margin-top: 30px;
+  color: #92a6b9;
+}
+@media (max-width: 1023px) {
+  .footer-left {
+    width: 100%;
+  }
+}
+
+.footer-center {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0 30px;
+}
+.footer-center__menu h4 {
+  font-size: 24px;
+  color: var(--gray-color);
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+.footer-center__menu a {
+  color: var(--text-black-color);
+  display: block;
+  margin-bottom: 25px;
+  text-decoration: none;
+}
+.footer-center__menu a:hover {
+  color: var(--accent);
+  -webkit-transition: var(--transition-defult);
+  transition: var(--transition-defult);
+}
+@media (max-width: 1023px) {
+  .footer-center {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 578px) {
+  .footer-center {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.footer-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100%;
+  width: 20%;
+}
+.footer-right__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.footer-right__social li {
+  display: block;
+  margin: 0 15px 20px 15px;
+}
+.footer-right__social li a {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  -webkit-box-shadow: var(--main-box-shadow);
+          box-shadow: var(--main-box-shadow);
+  border-radius: 10em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: var(--transition-defult);
+  transition: var(--transition-defult);
+  text-decoration: none;
+}
+.footer-right__social li a .fa {
+  color: var(--accent);
+  font-size: 24px;
+}
+@media (max-width: 1023px) {
+  .footer-right {
+    width: 100%;
+  }
+}
+
+.footer-right__year {
+  font-size: 14px;
+  text-align: left;
+  color: #92a6b9;
+  margin-top: 59px;
+}
+@media (max-width: 1023px) {
+  .footer-right__year {
+    margin-top: 0;
+    text-align: center;
+  }
 }
 
 .mobile-about__img {
@@ -1380,6 +1422,114 @@ p {
   }
   .want-banner__right .block-info a {
     margin-top: 10px;
+  }
+}
+
+.contacts {
+  position: relative;
+}
+.contacts__inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contacts__left {
+  width: 50%;
+  border-left: 1px solid #e9f2f7;
+  border-right: 1px solid #e9f2f7;
+  padding: 258px 86px;
+}
+.contacts__left h2 {
+  margin-bottom: 43px;
+}
+.contacts__left p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 130%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.01em;
+  color: #425466;
+}
+.contacts__left p:last-child {
+  margin-bottom: 0;
+}
+.contacts__left p:last-child span {
+  color: #7f94a9;
+}
+.contacts__right {
+  width: 50%;
+  padding: 258px 86px;
+}
+.contacts__right::before {
+  content: "";
+  left: 50%;
+  right: 0;
+  top: 137px;
+  bottom: 137px;
+  background: #63be37;
+  position: absolute;
+  z-index: -1;
+}
+.contacts__right-info {
+  margin-bottom: 30px;
+}
+.contacts__right-info h6 {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  color: #363f41;
+  margin-bottom: 10px;
+}
+.contacts__right-info p {
+  font-size: 25px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  font-family: "Cera-st", sans-serif;
+}
+.contacts__right-info a {
+  font-size: 25px;
+  line-height: 90%;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  font-family: "Cera-st", sans-serif;
+  text-decoration: none;
+}
+.contacts__right-info a:hover {
+  opacity: 0.8;
+}
+@media (max-width: 1023px) {
+  .contacts__inside {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacts__left {
+    width: 100%;
+    padding: 86px;
+  }
+  .contacts__right {
+    width: 100%;
+    padding: 0 86px 86px;
+    border-left: 1px solid #e9f2f7;
+    border-right: 1px solid #e9f2f7;
+  }
+  .contacts__right::before {
+    top: 48%;
+    left: 0;
+    bottom: 0;
+  }
+}
+@media (max-width: 578px) {
+  .contacts__left {
+    padding: 46px 15px;
+  }
+  .contacts__right {
+    padding: 0 15px 46px;
   }
 }
 
@@ -3053,66 +3203,1795 @@ p {
   }
 }
 
-[data-aos=cus-point] {
-  -webkit-transform: translate3d(0, 25px, 0);
-          transform: translate3d(0, 25px, 0);
-  opacity: 0;
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-}
-[data-aos=cus-point].aos-animate {
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  opacity: 1;
-}
-
-[data-aos=cus-headline] {
-  -webkit-transform: translate3d(0, 50px, 0);
-          transform: translate3d(0, 50px, 0);
-  opacity: 0;
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-}
-[data-aos=cus-headline].aos-animate {
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  opacity: 1;
-}
-
-#preipo-img {
-  z-index: 2;
-  -webkit-transition-delay: 12s;
-          transition-delay: 12s;
-}
-
-#funds {
-  z-index: 2;
-  -webkit-transition-delay: 8s;
-          transition-delay: 8s;
-}
-
-#support {
-  z-index: 2;
-  -webkit-transition-delay: 4s;
-          transition-delay: 4s;
-}
-
-#cons {
-  z-index: 2;
-}
-
-.benefit__item {
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-}
-
-.benefit__list {
+.card-statistic {
+  border-radius: 8px;
+  height: 100%;
+  border: 1px solid #D6E1EC;
+  padding: 20px 15px;
   position: relative;
+}
+.card-statistic h6 {
+  font-size: 40px;
+  color: #63BE37;
+  font-weight: normal;
+  letter-spacing: -0.32px;
+  margin-bottom: 10px;
+  font-family: "Sora", sans-serif;
+}
+.card-statistic span {
+  font-size: 16px;
+  color: #363F41;
+  line-height: 19px;
+  display: block;
+}
+.card-statistic__icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+@media (max-width: 578px) {
+  .card-statistic {
+    padding: 15px 10px 15px 15px;
+  }
+  .card-statistic h6 {
+    font-size: 34px;
+    margin-bottom: 3.6px;
+  }
+}
+
+.preipo-card p {
+  line-height: 130%;
+  font-size: 16px;
+  margin-bottom: 0;
+  color: #363F41;
+}
+.preipo-card .card {
+  padding: 35px 30px 40px;
+}
+.preipo-card__wrapper {
+  padding-right: 20px;
+  position: relative;
+}
+.preipo-card__headline {
+  color: #363F41;
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: -0.01em;
+  margin-bottom: 35px;
+}
+.preipo-card__headline-calendar {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #363F41;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.preipo-card__headline-calendar p {
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+.preipo-card__headline-calendar p span {
+  margin-right: 10px;
+  color: #BDC8D3;
+}
+.preipo-card__headline-calendar img {
+  display: inline-block;
+}
+.preipo-card__quote {
+  padding: 2px 0 2px 20px;
+  font-size: 19px;
+  color: #363F41;
+  line-height: 130%;
+  font-weight: normal;
+  margin-bottom: 35px;
+  position: relative;
+}
+.preipo-card__quote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 5px;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #63BE37;
+}
+.preipo-card__list {
+  margin-bottom: 0;
+}
+.preipo-card__list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.preipo-card__list-wrapper .preipo-card__list {
+  width: 50%;
+}
+.preipo-card__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #425466;
+  padding-left: 22px;
+  line-height: 130%;
+  position: relative;
+}
+.preipo-card__list li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.preipo-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  background: #BDC8D3;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: block;
+}
+.preipo-card-prompt p {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #7A828A;
+}
+@media (max-width: 1023px) {
+  .preipo-card .card {
+    padding: 30px 16px;
+  }
+  .preipo-card__headline {
+    margin-bottom: 30px;
+    display: block;
+  }
+  .preipo-card__quote {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 578px) {
+  .preipo-card p {
+    font-size: 15px;
+  }
+  .preipo-card__wrapper {
+    padding-right: 0;
+  }
+  .preipo-card__quote {
+    padding: 2px 0 2px 20px;
+    font-size: 16px;
+  }
+  .preipo-card__list li {
+    font-size: 15px;
+  }
+  .preipo-card__list-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .preipo-card__list-wrapper .preipo-card__list {
+    width: 100%;
+  }
+  .preipo-card__list-wrapper .preipo-card__list:nth-of-type(1) {
+    margin-bottom: 15px;
+  }
+}
+
+.preipo-card__image-block {
+  margin-bottom: 25px;
+}
+.preipo-card__image-block.card {
+  padding: 20px;
+}
+.preipo-card__image-block img {
+  width: 100%;
+  height: 451px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+@media (max-width: 1023px) {
+  .preipo-card__image-block {
+    margin-bottom: 15px;
+  }
+  .preipo-card__image-block img {
+    height: 100%;
+  }
+}
+
+.preipo-card-profitability {
+  margin-bottom: 25px;
+}
+.preipo-card-profitability .preipo-card__headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.preipo-card-profitability__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -10px;
+}
+.preipo-card-profitability__info-item {
+  width: 33.3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #EAF0F5;
+  border-radius: 15px;
+  margin: 0 10px;
+  padding: 25px 10px 20px 15px;
+}
+.preipo-card-profitability__info-item img {
+  width: 40px;
+  height: 40px;
+  margin-top: 2px;
+}
+.preipo-card-profitability__info-text {
+  margin-left: 10px;
+}
+.preipo-card-profitability__info-text span {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #7A90A6;
+}
+.preipo-card-profitability__info-text h6 {
+  font-family: "Sora";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+  color: #363F41;
+}
+.preipo-card-profitability__info-text h6.green {
+  color: #00B929;
+}
+.preipo-card-profitability__info-text h6.red {
+  color: #FF6359;
+}
+@media (max-width: 1023px) {
+  .preipo-card-profitability {
+    margin-bottom: 15px;
+  }
+  .preipo-card-profitability .preipo-card__headline {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .preipo-card-profitability .preipo-card__headline-calendar {
+    margin-top: 30px;
+  }
+  .preipo-card-profitability__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .preipo-card-profitability__info-item {
+    margin: 10px 0 0;
+    width: 100%;
+  }
+}
+
+.preipo-card-video {
+  margin-bottom: 25px;
+}
+.preipo-card-video.card {
+  padding: 20px;
+}
+@media (max-width: 1023px) {
+  .preipo-card-video {
+    margin-bottom: 15px;
+  }
+}
+
+.preipo-card-about {
+  margin-bottom: 25px;
+}
+.preipo-card-about p {
+  margin-bottom: 20px;
+  color: #425466;
+}
+.preipo-card-about p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 1023px) {
+  .preipo-card-about {
+    margin-bottom: 15px;
+  }
+}
+
+.preipo-card-strategic-partners {
+  margin-bottom: 25px;
+}
+.preipo-card-strategic-partners__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.preipo-card-strategic-partners__items-img {
+  width: 33.3%;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.preipo-card-strategic-partners__items-img img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+@media (max-width: 1023px) {
+  .preipo-card-strategic-partners {
+    margin-bottom: 15px;
+  }
+  .preipo-card-strategic-partners__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .preipo-card-strategic-partners__items-img {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+  .preipo-card-strategic-partners__items-img img {
+    width: auto;
+  }
+  .preipo-card-strategic-partners__items-img:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .preipo-card-strategic-partners__items-img.vert-line::before {
+    right: 0;
+    top: auto;
+    left: 0;
+    width: auto;
+    height: 1px;
+  }
+}
+
+.preipo-card-discount {
+  margin-bottom: 25px;
+}
+.preipo-card-discount__inside-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -10px;
+}
+.preipo-card-discount__item {
+  max-width: 50%;
+  width: 100%;
+  padding: 20px 10px 20px 15px;
+}
+.preipo-card-discount .card-statistic {
+  margin: 0 10px;
+  height: auto;
+}
+.preipo-card-discount .card-statistic.active {
+  background-color: #63BE37;
+}
+.preipo-card-discount .card-statistic.active h6 {
+  color: #fff;
+}
+.preipo-card-discount .card-statistic.active span {
+  color: #fff;
+}
+@media (max-width: 1023px) {
+  .preipo-card-discount {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 578px) {
+  .preipo-card-discount__inside-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .preipo-card-discount__item {
+    max-width: 100%;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.preipo-card-exit-to-ipo {
+  margin-bottom: 25px;
+}
+.preipo-card-exit-to-ipo__inside-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 35px -7.5px 0;
+}
+.preipo-card-exit-to-ipo__item {
+  max-width: 50%;
+  width: 100%;
+  padding: 20px 10px 20px 15px;
+}
+.preipo-card-exit-to-ipo .card-statistic {
+  margin: 0 7.5px;
+  height: auto;
+}
+@media (max-width: 1023px) {
+  .preipo-card-exit-to-ipo {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 578px) {
+  .preipo-card-exit-to-ipo__inside-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 30px 0 0;
+  }
+  .preipo-card-exit-to-ipo__item {
+    max-width: 100%;
+    padding: 15px 10px 15px 15px;
+    margin-bottom: 10px;
+  }
+  .preipo-card-exit-to-ipo .card-statistic {
+    margin: 0;
+  }
+  .preipo-card-exit-to-ipo .card-statistic:nth-of-type(1) {
+    margin-bottom: 10px;
+  }
+}
+
+.preipo-card-invest {
+  margin-bottom: 25px;
+}
+@media (max-width: 1023px) {
+  .preipo-card-invest {
+    margin-bottom: 15px;
+  }
+}
+
+.preipo-card-ceo {
+  margin-bottom: 25px;
+}
+.preipo-card-ceo__inside-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.preipo-card-ceo__inside-wrapper p {
+  color: #425466;
+}
+.preipo-card-ceo__img {
+  width: 195px;
+  height: 195px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 195px;
+          flex: 0 0 195px;
+  background: #E8E5E1;
+  border-radius: 15px;
+}
+.preipo-card-ceo__img img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}
+.preipo-card-ceo__text {
+  margin-left: 30px;
+}
+.preipo-card-ceo__text .preipo-card__quote {
+  margin-bottom: 20px;
+}
+.preipo-card-ceo__text .preipo-card__quote span {
+  color: #92A6B9;
+  display: block;
+}
+@media (max-width: 1023px) {
+  .preipo-card-ceo {
+    margin-bottom: 15px;
+  }
+  .preipo-card-ceo__inside-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .preipo-card-ceo__img {
+    width: 310px;
+    height: 310px;
+    margin: 0 auto 30px;
+  }
+  .preipo-card-ceo__text {
+    margin-left: 0;
+  }
+}
+
+.preipo-card-clients {
+  margin-bottom: 25px;
+}
+.preipo-card-clients__img img {
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  .preipo-card-clients {
+    margin-bottom: 15px;
+  }
+}
+
+.preipo-card-main-investor {
+  margin-bottom: 25px;
+}
+@media (max-width: 1023px) {
+  .preipo-card-main-investor {
+    margin-bottom: 15px;
+  }
+}
+
+.preipo-card-prospects {
+  margin-bottom: 25px;
+}
+@media (max-width: 1023px) {
+  .preipo-card-prospects {
+    margin-bottom: 15px;
+  }
+}
+
+.preipo-card-revenue {
+  margin-bottom: 25px;
+}
+.preipo-card-revenue__diagram {
+  margin-bottom: 40px;
+}
+.preipo-card-revenue__diagram img {
+  width: 100%;
+}
+.preipo-card-revenue .preipo-card-prompt p {
+  font-size: 16px;
+  color: #425466;
+  line-height: 130%;
+}
+@media (max-width: 1023px) {
+  .preipo-card-revenue {
+    margin-bottom: 15px;
+  }
+}
+
+.preipo-card-capitalization {
+  margin-bottom: 25px;
+}
+.preipo-card-capitalization__diagram {
+  margin-bottom: 40px;
+}
+.preipo-card-capitalization__diagram img {
+  width: 100%;
+}
+.preipo-card-capitalization .preipo-card-prompt p {
+  font-size: 16px;
+  color: #425466;
+  line-height: 130%;
+}
+@media (max-width: 1023px) {
+  .preipo-card-capitalization {
+    margin-bottom: 15px;
+  }
+}
+
+.preipo-card-comparison {
+  margin-bottom: 25px;
+}
+.preipo-card-comparison .preipo-card__list {
+  margin-bottom: 15px;
+}
+.preipo-card-comparison .comparison-table {
+  margin: 35px 0;
+}
+.preipo-card-comparison .comparison-table-th {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #DBDFEA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.preipo-card-comparison .comparison-table-th-null {
+  width: 50%;
+}
+.preipo-card-comparison .comparison-table-th-cell {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #92A6B9;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-left: 10px;
+  width: 5px;
+}
+.preipo-card-comparison .comparison-table-tr {
+  padding: 15px 0;
+  border-bottom: 1px solid #DBDFEA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.preipo-card-comparison .comparison-table-tr.active .comparison-table-td {
+  color: #63BE37;
+}
+.preipo-card-comparison .comparison-table-td {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #27272E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-left: 15px;
+  width: 5px;
+}
+.preipo-card-comparison .comparison-table-td:nth-of-type(1) {
+  width: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  padding-left: 0;
+}
+.preipo-card-comparison .comparison-table-td-img {
+  width: 70px;
+  margin-right: 35px;
+}
+.preipo-card-comparison .comparison-table-td-img img {
+  width: 100%;
+  font-size: 0px;
+}
+@media (max-width: 1023px) {
+  .preipo-card-comparison {
+    margin-bottom: 15px;
+  }
+  .preipo-card-comparison .comparison-table-td-img {
+    display: none;
+  }
+}
+@media (max-width: 578px) {
+  .preipo-card-comparison .comparison-table-th-null {
+    width: 30%;
+  }
+  .preipo-card-comparison .comparison-table-td:nth-of-type(1) {
+    width: 30%;
+  }
+}
+
+.preipo-card-risks {
+  margin-bottom: 25px;
+}
+.preipo-card-risks p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+@media (max-width: 1023px) {
+  .preipo-card-risks {
+    margin-bottom: 15px;
+  }
+}
+
+.preipo-card-platform {
+  margin-bottom: 25px;
+}
+.preipo-card-platform__img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.preipo-card-platform__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -10px;
+}
+.preipo-card-platform__item {
+  width: 100%;
+  height: 100%;
+}
+.preipo-card-platform__item-wrapper {
+  width: 33.333%;
+  margin-top: 35px;
+  padding: 0 10px;
+}
+.preipo-card-platform__item-img {
+  margin-bottom: 20px;
+  height: 176px;
+}
+.preipo-card-platform__item-img img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.preipo-card-platform__item-text p {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+@media (max-width: 1023px) {
+  .preipo-card-platform {
+    margin-bottom: 15px;
+  }
+  .preipo-card-platform__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .preipo-card-platform__item-wrapper {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .preipo-card-platform__item-img {
+    width: 90px;
+    height: 71px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    margin-right: 15px;
+  }
+}
+
+.preipo-card-advantages-platform {
+  margin-bottom: 25px;
+}
+.preipo-card-advantages-platform__inside-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.preipo-card-advantages-platform__inside-wrapper:nth-of-type(1) {
+  padding-top: 0;
+}
+.preipo-card-advantages-platform__inside-wrapper:nth-of-type(1).horizon-line::after {
+  display: none;
+}
+.preipo-card-advantages-platform__img {
+  width: 300px;
+  height: 213px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
+}
+.preipo-card-advantages-platform__img img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}
+.preipo-card-advantages-platform__text {
+  margin-left: 20px;
+  padding-top: 20px;
+}
+.preipo-card-advantages-platform__text .preipo-card__quote {
+  margin-bottom: 15px;
+}
+.preipo-card-advantages-platform__text .preipo-card__quote span {
+  color: #92A6B9;
+  display: block;
+}
+@media (max-width: 1023px) {
+  .preipo-card-advantages-platform {
+    margin-bottom: 15px;
+  }
+  .preipo-card-advantages-platform__inside-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 30px;
+    margin-top: 30px;
+  }
+  .preipo-card-advantages-platform__inside-wrapper:nth-of-type(1) {
+    margin-top: 0;
+  }
+  .preipo-card-advantages-platform__img {
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .preipo-card-advantages-platform__text {
+    margin-left: 0;
+    padding-top: 0;
+  }
+}
+
+.preipo-card-solutions {
+  margin-bottom: 25px;
+}
+.preipo-card-solutions__inside {
+  margin-top: 35px;
+}
+.preipo-card-solutions__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+}
+.preipo-card-solutions__item:first-child {
+  padding-top: 0;
+}
+.preipo-card-solutions__item-img {
+  width: 300px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.preipo-card-solutions__item-img img {
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.preipo-card-solutions__item-text h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 130%;
+  color: #27272E;
+}
+.preipo-card-solutions__item-text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #27272E;
+}
+@media (max-width: 1023px) {
+  .preipo-card-solutions {
+    margin-bottom: 15px;
+  }
+  .preipo-card-solutions__item {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 20px;
+  }
+  .preipo-card-solutions__item:first-of-type {
+    margin-top: 0;
+  }
+  .preipo-card-solutions__item-img {
+    width: 90px;
+    margin-right: 15px;
+  }
+  .preipo-card-solutions__item-img img {
+    width: 100%;
+  }
+  .preipo-card-solutions__item-text h6 {
+    font-size: 16px;
+  }
+  .preipo-card-solutions__item-text p {
+    font-size: 14px;
+  }
+}
+
+.preipo-card-business-model {
+  margin-bottom: 25px;
+}
+.preipo-card-business-model .preipo-card__list {
+  position: relative;
+  padding: 0 0 20px;
+}
+.preipo-card-business-model .preipo-card__list::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(224, 225, 226, 0)), color-stop(20.63%, #E0E1E2), color-stop(77.89%, rgba(224, 225, 226, 0.876953)), color-stop(99.04%, rgba(224, 225, 226, 0.15625)));
+  background: linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, #E0E1E2 20.63%, rgba(224, 225, 226, 0.876953) 77.89%, rgba(224, 225, 226, 0.15625) 99.04%);
+}
+.preipo-card-business-model .preipo-card__list:last-child {
+  padding: 0;
+}
+.preipo-card-business-model .preipo-card__list h5 {
+  color: #363F41;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  margin: 20px 0 15px;
+}
+.preipo-card-business-model .business-model-list {
+  background: #F7F7F7;
+  border: 1px solid #DFE1E8;
+  border-radius: 8px;
+  padding: 20px 15px;
+  margin-bottom: 20px;
+}
+.preipo-card-business-model .business-model-list::before {
+  display: none;
+}
+
+.trading-view-platform {
+  margin-bottom: 25px;
+}
+.trading-view-platform__item {
+  padding: 0 0 20px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.trading-view-platform__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(224, 225, 226, 0)), color-stop(20.63%, #E0E1E2), color-stop(77.89%, rgba(224, 225, 226, 0.876953)), color-stop(99.04%, rgba(224, 225, 226, 0.15625)));
+  background: linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, #E0E1E2 20.63%, rgba(224, 225, 226, 0.876953) 77.89%, rgba(224, 225, 226, 0.15625) 99.04%);
+}
+.trading-view-platform__item:last-child {
+  margin-bottom: 0;
+  padding: 0;
+}
+.trading-view-platform__item:last-child::before {
+  display: none;
+}
+.trading-view-platform__item h5 {
+  color: #363F41;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  margin-bottom: 15px;
+}
+.trading-view-platform__item-img {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
+  margin: auto 40px auto 0;
+}
+.trading-view-platform__item-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.trading-view-platform__item-description {
+  margin: auto 0;
+}
+.trading-view-platform__item-description p {
+  color: #425466;
+}
+.trading-view-platform__item-description .preipo-card__list li {
+  margin-bottom: 5px;
+}
+@media (max-width: 1023px) {
+  .trading-view-platform__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .trading-view-platform__item-img {
+    max-width: 100%;
+    height: 200px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    margin: 0 auto 20px;
+  }
+  .trading-view-platform__item-img img {
+    height: 100%;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+  }
+}
+
+.preipo-card-main-investors {
+  margin-bottom: 25px;
+}
+.preipo-card-main-investors p {
+  color: #363F41;
+}
+
+.preipo-card__person {
+  width: 50%;
+  padding: 0 35px;
+}
+.preipo-card__person-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -35px;
+}
+.preipo-card__person-img {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+}
+.preipo-card__person-img img {
+  width: 100%;
+}
+.preipo-card__person-text h5 {
+  color: #363F41;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%;
+  margin-bottom: 20px;
+}
+.preipo-card__person-text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media (max-width: 1023px) {
+  .preipo-card__person {
+    width: 100%;
+  }
+  .preipo-card__person:first-child {
+    margin-bottom: 35px;
+  }
+  .preipo-card__person-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.preipo-card-master-plan {
+  margin-bottom: 35px;
+}
+
+.preipo-card__points {
+  margin-bottom: 0;
+}
+.preipo-card__points li {
+  color: #425466;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+.preipo-card__points li:last-child {
+  margin-bottom: 0;
+}
+.preipo-card__points li span {
+  padding-right: 6px;
+  margin-top: -2px;
+  display: inline-block;
+}
+.preipo-card__points li p {
+  margin-bottom: 0;
+}
+
+.preipo-card-block {
+  margin-bottom: 35px;
+}
+
+.preipo-card-growth-strategy {
+  margin-bottom: 35px;
+}
+.preipo-card-growth-strategy p {
+  color: #363F41;
+}
+.preipo-card-growth-strategy__img img {
+  width: 100%;
+}
+
+.card {
+  -webkit-box-shadow: 0 0 1px rgba(12, 26, 75, 0.1019607843), 0 4px 20px -2px rgba(50, 50, 71, 0.0784313725);
+          box-shadow: 0 0 1px rgba(12, 26, 75, 0.1019607843), 0 4px 20px -2px rgba(50, 50, 71, 0.0784313725);
+  background-color: #fff;
+  border-radius: 16px;
+  position: relative;
+  display: block;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.card-info {
+  padding: 20px;
+  margin-top: 25px;
+}
+.card-info-inset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.card-info .preipo-icon {
+  margin-right: 20px;
+}
+.card-info .preipo-info {
+  max-width: 100%;
+  width: 100%;
+}
+.card-info .preipo-info .slogan {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7a90a6;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.card-info .preipo-info .value {
+  color: #363F41;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+}
+
+.preipo-header {
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0 0 1px rgba(12, 26, 75, 0.1019607843), 0 4px 20px -2px rgba(50, 50, 71, 0.0784313725);
+          box-shadow: 0 0 1px rgba(12, 26, 75, 0.1019607843), 0 4px 20px -2px rgba(50, 50, 71, 0.0784313725);
+  background-color: #fff;
+  border-radius: 16px;
+  position: relative;
+  display: block;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.preipo-header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.preipo-header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 42%;
+          flex: 0 0 42%;
+  max-width: 42%;
+  width: 100%;
+}
+.preipo-header__slogan {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 58%;
+          flex: 0 0 58%;
+  max-width: 58%;
+  width: 100%;
+  line-height: 1.2;
+  padding-left: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #363F41;
+}
+.preipo-header__bottom {
+  padding: 20px;
+  border-top: 1px solid #e0e1e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 1023px) {
+  .preipo-header__slogan {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    padding-left: 0;
+  }
+  .preipo-header__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .preipo-header__logo::before {
+    display: none;
+  }
+  .preipo-header__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.preipo-logo {
+  max-width: 80px;
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
+  margin-right: 20px;
+}
+.preipo-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.preipo-title {
+  font-size: 32px;
+  font-weight: 400;
+  color: #363F41;
+  line-height: 1.1;
+  padding-right: 25px;
+}
+
+.preipo-tag {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  max-width: 60%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.preipo-tag .tag {
+  color: #7f94a9;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 12px;
+  background-color: #eef3f5;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+@media (max-width: 1023px) {
+  .preipo-tag {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.preipo-link {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  max-width: 40%;
+  width: 100%;
+  text-align: right;
+}
+.preipo-link svg {
+  margin-right: 11px;
+}
+.preipo-link a {
+  font-size: 18px;
+  color: #0078fb;
+}
+@media (max-width: 1023px) {
+  .preipo-link {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.preipo-idea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 35px;
+  padding: 0 65px;
+}
+.preipo-idea__main {
+  width: 771px;
+}
+.preipo-idea__main .card {
+  padding: 30px 15px;
+}
+.preipo-idea__aside {
+  width: 371px;
+  margin-left: 25px;
+}
+@media (max-width: 1023px) {
+  .preipo-idea {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 0;
+  }
+  .preipo-idea__main {
+    width: 100%;
+  }
+  .preipo-idea__aside {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 35px;
+  }
+}
+
+.preipo-card__pdf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.preipo-card__pdf-img {
+  margin-right: 22px;
+  padding-left: 10px;
+}
+.preipo-card__pdf-text {
+  width: 100%;
+}
+.preipo-card__pdf-text h6 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  color: #363f41;
+}
+.preipo-card__pdf-text span {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  color: #92a6b9;
+}
+.preipo-card__pdf-btn {
+  margin-left: 30px;
+  padding: 17px 30px 17px 50px;
+  border-left: 1px solid #dfe1e8;
+}
+.preipo-card__pdf-btn a {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  color: #77c850;
+  text-decoration: none;
+}
+@media (max-width: 1023px) {
+  .preipo-card__pdf {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .preipo-card__pdf-text {
+    text-align: center;
+    margin-top: 15px;
+  }
+  .preipo-card__pdf-btn {
+    margin-left: 0;
+    margin-top: 15px;
+    border-left: 0;
+    border-top: 1px solid #dfe1e8;
+    padding: 15px 50px 0;
+  }
+}
+
+.preipo-status {
+  padding: 20px;
+}
+.preipo-status .status {
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+.preipo-status .status.status-green {
+  background-color: #00b929;
+  color: #fff;
+}
+
+.company-profile-section {
+  padding: 30px 20px;
+  margin-top: 25px;
+}
+.company-profile-section ul li {
+  padding: 15px 0;
+}
+.company-profile-section ul li:last-child {
+  padding: 15px 0 0;
+}
+.company-profile-section ul li::after {
+  bottom: 0;
+  top: auto;
+}
+.company-profile-section ul li span {
+  display: block;
+}
+.company-profile-section ul li span:first-child {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 17.6px;
+  text-transform: uppercase;
+  color: #7a90a6;
+  margin-bottom: 16px;
+}
+.company-profile-section ul li span:last-child {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.32px;
+  color: #363F41;
+  font-family: "Sora", sans-serif;
+}
+
+.dealings-section {
+  padding: 30px 20px;
+  margin-top: 25px;
+}
+.dealings-section ul li {
+  padding: 15px 0;
+  position: relative;
+}
+.dealings-section ul li:last-child {
+  padding: 15px 0 0;
+}
+.dealings-section ul li::after {
+  bottom: 0;
+  top: auto;
+}
+.dealings-section ul li span {
+  display: block;
+}
+.dealings-section ul li span:nth-child(1) {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 17.6px;
+  text-transform: uppercase;
+  color: #7a90a6;
+  margin-bottom: 16px;
+}
+.dealings-section ul li span:nth-child(2) {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.32px;
+  color: #363F41;
+  font-family: "Sora", sans-serif;
+}
+.dealings-section ul li p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #425466;
+  margin-bottom: 0;
+  margin-top: 22px;
+}
+.dealings-section-info {
+  position: absolute;
+  right: 0;
+  top: 22px;
+}
+.dealings-section .btn-outline {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.to-learn-more {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130;
+  color: #4065ff;
+  margin-top: 10px;
+}
+
+.preipo-action {
+  text-align: center;
+}
+.preipo-action .btn {
+  padding: 14px 25px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.preipo-action p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #7a90a6;
+}
+
+button {
+  border: 0;
+}
+
+.btn {
+  padding: 0 25px;
+  border-radius: 8px;
+  font-size: 17px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  font-weight: 500;
+  overflow: hidden;
+  position: relative;
+  line-height: 21px;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.btn-color {
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  background: linear-gradient(46.31deg, #0c9665 2.41%, #71c550 98.05%);
+}
+.btn-color:hover {
+  color: #fff;
+  background: linear-gradient(46.31deg, #0c9665 2.41%, #71c550 98.05%);
+}
+
+.preipo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 1023px) {
+  .preipo-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.preipo-card-link {
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.preipo-card-link-wrapper {
+  margin-right: 46px;
+  width: 434px;
+  height: 434px;
+  text-decoration: none;
+}
+.preipo-card-link-wrapper:hover .preipo-card-link-img {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+.preipo-card-link-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 12px;
+  z-index: -1;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.preipo-card-link-tag {
+  left: 15px;
+  top: 15px;
+  position: absolute;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+}
+.preipo-card-link-tag.white {
+  background: #fff;
+  color: #425466;
+}
+.preipo-card-link-tag.black {
+  background: #425466;
+  color: #fff;
+}
+.preipo-card-link__title {
+  border-radius: 12px;
+  width: 100%;
+}
+.preipo-card-link__title-img {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 25px;
+}
+.preipo-card-link__title h3 {
+  margin-bottom: 25px;
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+}
+.preipo-card-link__title h3.white {
+  color: #fff;
+}
+.preipo-card-link__title h4 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 130%;
+}
+.preipo-card-link__title h4.white {
+  color: #fff;
+}
+.preipo-card-link__title h4.black {
+  color: #363F41;
+}
+.preipo-card-link__info {
+  padding: 12px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.preipo-card-link__info.horizon-line::after {
+  opacity: 0.2;
+}
+.preipo-card-link__info-stat {
+  width: 33.3%;
+  text-align: center;
+}
+.preipo-card-link__info-stat h6 {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 120%;
+  opacity: 0.6;
+}
+.preipo-card-link__info-stat h5 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+}
+.preipo-card-link__info-stat:first-child {
+  text-align: left;
+}
+.preipo-card-link__info-stat:last-child {
+  text-align: right;
+}
+.preipo-card-link__info.white .preipo-card-link__info-stat h5 {
+  color: #ffffff;
+}
+.preipo-card-link__info.white .preipo-card-link__info-stat h6 {
+  color: #ffffff;
+}
+@media (max-width: 578px) {
+  .preipo-card-link {
+    position: absolute;
+    top: 0;
+  }
+  .preipo-card-link-wrapper {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+  .preipo-card-link-wrapper::before {
+    content: "";
+    padding-top: 100%;
+    float: left;
+  }
+  .preipo-card-link__info-stat h6 {
+    font-size: 3vw;
+  }
+  .preipo-card-link__info-stat h5 {
+    font-size: 4vw;
+  }
+  .preipo-card-link__title-img {
+    margin-bottom: 5px;
+  }
+  .preipo-card-link__title h3 {
+    margin-bottom: 5px;
+  }
+  .preipo-card-link__title h4 {
+    margin-bottom: 5px;
+  }
+}
+
+.card-trading-view .preipo-card-link__title {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 
 /* particles.js */
@@ -3223,6 +5102,9 @@ canvas {
   transition: var(--transition-defult);
   text-decoration: none;
   pointer-events: all;
+}
+.header-content__buttons .btn-outline {
+  background-color: #fff;
 }
 .header-content__buttons .btn-accent {
   background: var(--accent);
@@ -3471,24 +5353,41 @@ canvas {
   letter-spacing: 0.01em;
 }
 
+.about-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 1023px) {
+  .about-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .about-img {
   max-width: 100%;
-  margin: 0 auto;
   width: 100%;
   position: sticky;
   top: 190px;
-  left: 0;
+  z-index: 3;
+  position: relative;
 }
 .about-img img {
-  width: 100%;
-  height: auto;
   position: absolute;
-  top: 120px;
+  top: 90px;
   left: 0;
+  width: 479px;
+  height: 624px;
 }
 @media (max-width: 1023px) {
   .about-img {
     position: static;
+  }
+  .about-img img {
+    display: none;
   }
 }
 
@@ -3602,7 +5501,7 @@ canvas {
   margin: 0 auto;
   width: 100%;
   position: sticky;
-  top: 240px;
+  top: 270px;
   left: 0;
 }
 
@@ -3619,10 +5518,13 @@ canvas {
   color: #fff;
 }
 .s-about .about-items:not(:last-child) {
-  margin-bottom: 180px;
+  margin-bottom: 350px;
 }
 .s-about .about-items:first-child {
-  margin-top: 150px;
+  margin-top: 300px;
+}
+.s-about .about-items:last-child {
+  margin-bottom: 200px;
 }
 .s-about .about-items p {
   color: #fff;
@@ -3670,6 +5572,9 @@ canvas {
   .s-about .about-items:first-child {
     margin-top: 50px;
   }
+  .s-about .about-items:last-child {
+    margin-bottom: 0;
+  }
   .s-about .about-items h4 {
     font-size: 26px;
     margin-bottom: 20px;
@@ -3679,8 +5584,24 @@ canvas {
   }
 }
 
+.s-about-column {
+  width: 50%;
+}
+.s-about-column:first-child {
+  position: relative;
+  top: -200px;
+}
+@media (max-width: 1023px) {
+  .s-about-column {
+    width: 100%;
+  }
+  .s-about-column:first-child {
+    display: none;
+  }
+}
+
 .s-invest {
-  background-color: var(--bg-color);
+  background-color: #fff;
   min-height: 500px;
   padding: 80px 0;
   font-family: var(--headlineFont);
